@@ -1,6 +1,6 @@
 # Privacy Review
 
-Date: 2026-08-22 (v1.1.0 release candidate). Reviewer: automated scan + manual audit.
+Date: 2026-08-22 (v1.1.0 public GitHub release). Reviewer: automated scan + manual audit.
 
 ## Automated controls
 

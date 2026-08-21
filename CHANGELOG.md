@@ -3,7 +3,7 @@
 All notable changes to this repository are documented here. Scientific results
 are frozen; entries below concern code organization and release preparation only.
 
-## [1.1.0] — 2026-08-22 (JAHA v5 Phase 3B extension release candidate)
+## [1.1.0] — 2026-08-22 (JAHA v5 Phase 3B extension release)
 
 - Added the final-lineage Phase 3B aggregate evidence bundle, including source
   agreement, log-scale sensitivity, source-count closure, source-defined
@@ -14,8 +14,8 @@ are frozen; entries below concern code organization and release preparation only
   and figure provenance. The controlled Figure 2 patient-level scatter and
   Bland–Altman source values remain excluded from the public repository.
 - Updated release metadata to repository version `v1.1.0` and extension package
-  citation version `0.2.0`. Archival DOI status remains pending until the
-  versioned release is created.
+  citation version `0.2.0`. The GitHub release is published; no new archival DOI
+  is claimed for v1.1.0 until a versioned archive record is independently verified.
 
 ## [1.0.1] — 2026-08-04 (Zenodo archival release)
 
