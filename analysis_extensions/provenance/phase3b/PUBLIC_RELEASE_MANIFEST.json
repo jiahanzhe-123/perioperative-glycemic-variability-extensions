@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
   "package": "JAHA v5 Phase 3B measurement-context extension",
-  "release_status": "RELEASE_CANDIDATE_QA_PASS_PENDING_GITHUB_RELEASE",
+  "release_status": "GITHUB_RELEASE_TARGET_READY",
   "release_date": "2026-08-22",
   "repository": {
     "url": "https://github.com/jiahanzhe-123/perioperative-glycemic-variability-extensions",
     "tag": "v1.1.0",
-    "commit": "PENDING",
+    "commit": "f51bd42",
     "release_url": "https://github.com/jiahanzhe-123/perioperative-glycemic-variability-extensions/releases/tag/v1.1.0"
   },
   "controlled_data_boundary": {
