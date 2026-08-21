@@ -1,0 +1,73 @@
+# =============================================================================
+# PGV 路径配置模板 — 复制为 config/paths.yml 后按本机授权数据位置修改。
+# config/paths.yml 已加入 .gitignore,绝不提交;本模板可以提交。
+# 占位符以 /path/to/ 开头的键 = 未配置;代码对未配置键会明确报错而不是
+# 回退到任何仓库内位置(正式代码不依赖仓库内 symlink 或默认数据目录)。
+# =============================================================================
+
+# ---- 通用 -----------------------------------------------------------------
+seed: 20260726
+
+# ---- MIMIC-IV v3.1(PhysioNet 授权 + DUA) ---------------------------------
+# 早期补充分析工作区(含 final_statistical_freeze_20260727 等历史冻结)
+mimic_work: "/path/to/authorized/mimic_supplementary_analyses"
+mimic_freeze: "/path/to/authorized/mimic_supplementary_analyses/final_statistical_freeze_20260727"
+mimic_riv: "/path/to/authorized/mimic_supplementary_analyses/reviewer_issue_verification_20260728"
+# 原始 MIMIC SQL 抽取工程(sql/mimic 的历史对应物)
+mimic_sql_project: "/path/to/authorized/mimic_sql_extraction_project"
+
+# MIMIC 派生分析输入(患者级,受 DUA 限制,本地保存,绝不入库)
+# 该目录需含 data/analysis_base.csv 与 data/features_priority.csv
+mimic_derived_data: "/path/to/authorized/mimic_derived_data"
+
+# 【analysis of record】MIMIC BMI-record 管线本地可写工作目录。
+# 03_apply_bmi_plausibility.py 在此写出 analysis_base_bmi_repaired.csv;
+# 03_run_primary_models_mice.R 在此读取输入并写出结果。
+mimic_record_work: "/path/to/writable/mimic_analysis_record"
+
+# 【只读参考】BMI 修复阶段(phase3_5)输出目录;analysis-of-record 的下游
+# 模块冻结结果(绝对风险、SHR-GV 联合等)位于其 rerun_root/results/ 下。
+bmi_repair_work: "/path/to/authorized/phase3_5_bmi_repair"
+
+# 【只读参考】365 天 MICE 池化区间分析(stats_fix_phase1)输出目录
+stats_fix_work: "/path/to/authorized/stats_fix_phase1"
+
+# BMI 修复前的重构工作区(历史;亦含 eICU 跨库结果与本地 R 包库)
+rebuild_work: "/path/to/authorized/cardiac_glucose_rebuild_legacy"
+
+# 可选:本地 R 包库(若 flexsurv 等不在系统库);不需要时留空
+rlib_extra: ""
+
+# MIMIC 原始 CSV 目录(PhysioNet 下载的 mimic-iv-3.1 解压根;仅 02_harmonized 特征脚本只读引用)
+mimic_raw_csv: "/path/to/authorized/mimic-iv-3.1"
+
+# 方法审计与多库复现工作区(eICU 模块输入)
+method_audit_work: "/path/to/authorized/final_method_audit"
+replication_work: "/path/to/authorized/multidatabase_replication"
+harmonized_mimic: "/path/to/authorized/final_method_audit/00_audit"
+bugfix_work: "/path/to/authorized/final_bugfix_audit"
+
+# ---- eICU-CRD v2.0(PhysioNet 授权 + DUA) ---------------------------------
+eicu_work: "/path/to/authorized/eicu_cardiac_glucose_validation"
+eicu_ext: "/path/to/authorized/eicu_external_validation"
+
+# ---- INSPIRE v1.4.2(机构治理;非公开数据库) -------------------------------
+inspire_work: "/path/to/authorized/inspire_cardiac_work"
+inspire_raw: "/path/to/authorized/inspire_v142_raw"
+# 【analysis of record】INSPIRE v5 统一行政删失分析的可写输出目录
+inspire_record_work: "/path/to/writable/inspire_analysis_record"
+
+# 当前投稿包(RC3 或更新;机器可读附表一致性测试读取)
+manuscript_pkg: "/path/to/submission/package"
+
+# 稿件构建工作区(仅补充展示表用;不公开)
+manuscript_work: "/path/to/authorized/manuscript_workspace"
+
+# ---- 数据库连接(无密码;密码经环境变量或本机信任域,绝不写入任何仓库文件) ----
+mimic_pg_container: "mimic-pg"
+eicu_pg_container: "eicu-pg"
+inspire_pg_container: "inspire-pg"
+pg_user: "postgres"
+pg_database_mimic: "mimic"
+pg_database_eicu: "eicu"
+pg_database_inspire: "inspire_v142"

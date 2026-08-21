@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use the JAHA v5 extension package, please cite the repository release."
+title: "JAHA v5 measurement-context analysis extensions for perioperative glycemic variability"
+version: "0.1.0"
+date-released: "2026-08-21"
+authors:
+  - family-names: "Jia"
+    given-names: "Hanzhe"
+    email: "jhz0223@outlook.com"
+license: MIT
+repository-code: "https://github.com/jiahanzhe-123/perioperative-glycemic-variability-extensions"

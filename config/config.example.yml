@@ -1,0 +1,13 @@
+# 示例总配置(可复制为 config/config.yml;一般无需修改)。
+# 数据路径不在本文件——见 config/paths.example.yml(复制为 config/paths.yml 使用)。
+
+project_root: "."
+seed: 20260726
+
+# 输出目录(仓库相对;生成结果默认 gitignored)
+output_dir: "results"
+
+# 数据库版本声明(与 DATA_AVAILABILITY.md 一致)
+mimic_version: "3.1"
+eicu_version: "2.0"
+inspire_version: "1.4.2"

@@ -1,0 +1,66 @@
+# --- Secrets / local config (never commit) ---
+.env
+*.env
+config/paths.yml
+config/local.yml
+secrets/
+credentials/
+private/
+restricted/
+
+# --- Data: patient-level data and local workspace links must never be committed ---
+data/*
+!data/README.md
+!data/synthetic/
+!data/synthetic/**
+!data/synthetic
+
+# --- Results: generated outputs stay local; aggregate QC reports are kept ---
+results/*
+!results/qc/
+!results/qc/**
+!results/README.md
+
+# --- Binary / large analysis artifacts ---
+*.rds
+*.RData
+*.rda
+*.pkl
+*.pickle
+*.parquet
+*.feather
+*.db
+*.sqlite
+*.duckdb
+*.log
+*.zip
+*.tar.gz
+
+# --- OS / editor / session noise ---
+.DS_Store
+Thumbs.db
+.Rhistory
+.Rproj.user/
+.vscode/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+
+# --- Public JAHA v5 extension bundle ---
+# The original repository ignores generated results globally.  The extension
+# release intentionally commits only its reviewed aggregate evidence package.
+!analysis_extensions/
+!analysis_extensions/results/
+!analysis_extensions/results/**
+!analysis_extensions/figures/
+!analysis_extensions/figures/**
+!analysis_extensions/provenance/
+!analysis_extensions/provenance/**
+!analysis_extensions/reports/
+!analysis_extensions/reports/**
+analysis_extensions/config.yaml
+analysis_extensions/logs/
+analysis_extensions/manifests/
+analysis_extensions/outputs/
+analysis_extensions/local_reviewer_data_package/

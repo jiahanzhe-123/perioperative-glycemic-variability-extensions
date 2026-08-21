@@ -1,0 +1,53 @@
+name: documentation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Required docs exist
+        run: |
+          for f in README.md LICENSE CITATION.cff CONTRIBUTING.md \
+                   CODE_OF_CONDUCT.md SECURITY.md DATA_AVAILABILITY.md \
+                   CHANGELOG.md docs/ANALYSIS_WORKFLOW.md \
+                   docs/RESULT_PROVENANCE.md docs/REPRODUCIBILITY.md \
+                   docs/PRIVACY_REVIEW.md docs/RELEASE_CHECKLIST.md \
+                   docs/OPEN_ISSUES.md docs/PRIVATE_REVIEW_STATUS.md \
+                   docs/CODE_INVENTORY.md \
+                   docs/ARCHIVE_AND_REMOVAL_LOG.md; do
+            test -f "$f" || { echo "MISSING: $f"; exit 1; }
+          done
+          echo "all required docs present"
+
+      - name: Relative markdown links resolve
+        run: |
+          python3 - <<'EOF'
+          import os, re, sys
+          bad = []
+          for dp, _, fns in os.walk("."):
+              if ".git" in dp: continue
+              for fn in fns:
+                  if not fn.endswith(".md"): continue
+                  p = os.path.join(dp, fn)
+                  text = open(p, encoding="utf-8").read()
+                  for m in re.finditer(r"\]\(([^)#\s]+)", text):
+                      link = m.group(1)
+                      if link.startswith(("http://", "https://", "mailto:", "<")):
+                          continue
+                      target = os.path.normpath(os.path.join(dp, link))
+                      if not os.path.exists(target):
+                          bad.append((p, link))
+          for b in bad: print("BROKEN:", b)
+          sys.exit(1 if bad else 0)
+          EOF
+
+      - name: CITATION.cff parses as YAML
+        run: |
+          pip install pyyaml
+          python3 -c "import yaml; yaml.safe_load(open('CITATION.cff')); print('CITATION.cff OK')"

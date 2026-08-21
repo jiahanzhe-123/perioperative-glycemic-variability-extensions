@@ -1,0 +1,29 @@
+name: perioperative-gv
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.11
+  - pandas>=2.0
+  - numpy>=1.24
+  - scipy>=1.10
+  - matplotlib>=3.7
+  - pytest>=7.4
+  - pyyaml>=6.0
+  - r-base=4.5
+  - r-survival
+  - r-mice
+  - r-rms
+  - r-sandwich
+  - r-lmtest
+  - r-ggplot2
+  - r-dplyr
+  - r-tidyr
+  - r-readr
+  - r-hmisc
+  - r-patchwork
+  - r-jsonlite
+  - r-broom
+  - r-lme4
+  # flexsurv is pinned in renv.lock (2.3.2); install from CRAN if the
+  # conda build lags: Rscript -e 'install.packages("flexsurv")'

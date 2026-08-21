@@ -1,0 +1,60 @@
+# 全局常数(单一来源;各分析脚本引用,不得分散硬编码)
+
+seed: 20260726
+
+glucose:
+  unit: "mg/dL"
+  per10_mgdl_equals_mmoll: 0.555
+  valid_range_mgdl: [20, 1500]
+  exact_duplicate_rule: "drop exact (stay, time, value, source_class)"
+  near_duplicate_rule: "charted record removed when a laboratory record exists within +/-2 min with |diff| <= 1 mg/dL (laboratory preferred)"
+  same_minute_rule: "median within stay-minute after source-class selection"
+  source_priority: ["central_lab", "blood_gas", "poct", "icu_charted"]
+  min_timepoints_sd: 2
+  min_timepoints_arv_tw: 3
+
+exposure_window:
+  type: "right_open"
+  mimic: "[surgical_date_index 00:00, +24h)"
+  inspire: "[opend_time, +24h)"
+
+landmark:
+  mimic: "exposure_end (index date + 24h)"
+  inspire: "opend_time + 1440 min"
+  inspire_48h: "opend_time + 2880 min"
+
+outcome:
+  mimic_30d: "mortality by index day 30 among day-1 landmark survivors (all-cause)"
+  mimic_365d: "mortality by index day 365 among day-1 landmark survivors (all-cause)"
+  inspire_30d: "30d_reconciled_composite_v2: COALESCE(EHR inhosp_death_time, registry allcause_death_time), post-landmark"
+  inspire_365d: "exploratory only (incomplete follow-up)"
+
+shr:
+  eag_formula: "eAG = 28.7 * HbA1c - 46.7 (mg/dL)"
+  ratio: "SHR = mean_glucose / eAG (mean from identical sequence)"
+  eag_must_be_positive: true
+  hba1c_rule: "strictly 1-90 days before surgical index (hierarchical fallback documented; index-day values not called preoperative)"
+
+mice:
+  m: 50
+  maxit: 20
+  method_continuous: "pmm"
+  nelson_aalen: true
+  exclude_deterministic_duplicates: true
+  bmi_plausibility: "set <10 or >80 kg/m^2 to NA before imputation"
+
+bootstrap:
+  n: 1000
+  resample: "patient-level, full model refit"
+  fixed_contrast_quantiles: true
+
+spline:
+  mean_glucose_knots_primary: [0.05, 0.35, 0.65, 0.95]
+  gv_knots_30d: [0.10, 0.50, 0.90]
+  gv_knots_365d: [0.05, 0.35, 0.65, 0.95]
+
+procedure:
+  codebook_version_mimic: "cardiac_surgery_codebook_v2 (6523 reviewed, 1368 included)"
+  codebook_version_inspire: "cardiac_procedure_codebook_v1_structural_pending_dictionary"
+  hierarchy_mimic: ["cabg", "open_valve", "aortic_surgery", "transplant_vad", "congenital_cardiac", "transcatheter_valve", "pci", "other_cardiac"]
+  eicu_phenotype: "rule-based high-specificity (no formal chart-review validation)"

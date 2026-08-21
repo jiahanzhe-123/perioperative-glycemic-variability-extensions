@@ -1,0 +1,24 @@
+-- 02_indexes.sql — 连接键与常用查询索引
+BEGIN;
+CREATE INDEX IF NOT EXISTS idx_operations_subject ON raw.operations (subject_id);
+CREATE INDEX IF NOT EXISTS idx_operations_hadm    ON raw.operations (hadm_id);
+CREATE INDEX IF NOT EXISTS idx_operations_opid    ON raw.operations (op_id);
+CREATE INDEX IF NOT EXISTS idx_operations_pcs     ON raw.operations (icd10_pcs);
+CREATE INDEX IF NOT EXISTS idx_operations_dept    ON raw.operations (department);
+CREATE INDEX IF NOT EXISTS idx_diagnosis_subject  ON raw.diagnosis (subject_id);
+CREATE INDEX IF NOT EXISTS idx_diagnosis_time     ON raw.diagnosis (chart_time);
+CREATE INDEX IF NOT EXISTS idx_diagnosis_icd      ON raw.diagnosis (icd10_cm);
+CREATE INDEX IF NOT EXISTS idx_vitals_opid        ON raw.vitals (op_id);
+CREATE INDEX IF NOT EXISTS idx_vitals_subject     ON raw.vitals (subject_id);
+CREATE INDEX IF NOT EXISTS idx_vitals_item        ON raw.vitals (item_name);
+CREATE INDEX IF NOT EXISTS idx_vitals_time        ON raw.vitals (chart_time);
+CREATE INDEX IF NOT EXISTS idx_ward_subject       ON raw.ward_vitals (subject_id);
+CREATE INDEX IF NOT EXISTS idx_ward_item          ON raw.ward_vitals (item_name);
+CREATE INDEX IF NOT EXISTS idx_ward_time          ON raw.ward_vitals (chart_time);
+CREATE INDEX IF NOT EXISTS idx_labs_subject       ON raw.labs (subject_id);
+CREATE INDEX IF NOT EXISTS idx_labs_item          ON raw.labs (item_name);
+CREATE INDEX IF NOT EXISTS idx_labs_time          ON raw.labs (chart_time);
+CREATE INDEX IF NOT EXISTS idx_meds_subject       ON raw.medications (subject_id);
+CREATE INDEX IF NOT EXISTS idx_meds_drug          ON raw.medications (drug_name);
+CREATE INDEX IF NOT EXISTS idx_meds_time          ON raw.medications (chart_time);
+COMMIT;

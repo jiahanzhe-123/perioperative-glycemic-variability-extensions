@@ -1,0 +1,22 @@
+# Text files: normalize line endings
+* text=auto eol=lf
+
+# Force LF for scripts
+*.sh   text eol=lf
+*.py   text eol=lf
+*.R    text eol=lf
+*.sql  text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+
+# Binary formats
+*.png  binary
+*.pdf  binary
+*.rds  binary
+*.RData binary
+*.pkl  binary
+*.zip  binary
+
+# GitHub linguist hints
+*.sql linguist-language=SQL
+*.R linguist-language=R

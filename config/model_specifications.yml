@@ -1,0 +1,159 @@
+# 模型规格机器可读版(与 results 中 13_model_specification_matrix.csv / shr_gv_model_specification_matrix.csv /
+# 25_revised_model_specification_matrix.csv 一致;csv 版本保留在 results/machine_readable/)。
+# covariate_set 引用 config/covariate_sets.yml 中的集合 ID,不使用含糊描述。
+
+- model_id: MIMIC_PRIMARY_B_30D
+  database: MIMIC-IV 3.1
+  cohort: "GV-only: open cardiac surgery (codebook v2, first qualifying stay, adult), day-1 landmark survivors, >=2 eligible glucose measurements in date-anchored 24h window"
+  analytic_frame: "MIMIC_GVONLY_LANDMARK_V1 (N=10561, events 30d=296)"
+  time_anchor: "procedures_icd.chartdate (date-only; derived surgical_date_index)"
+  exposure_window: "[surgical_date_index 00:00, +24h), right-open"
+  landmark: "exposure_end (index date + 24h); follow-up restarts at landmark"
+  outcome: "mortality by index day 30 among day-1 landmark survivors (all-cause)"
+  horizon: "index day 30 (risk from landmark)"
+  model_family: "Cox proportional hazards"
+  formula: "Surv(t_lm_30, event_lm_30) ~ gv10 + rcs(mean_glu, 4 knots at cohort 5/35/65/95%) + fixed clinical covariates"
+  exposure: "SD-based GV (blood-only priority series)"
+  exposure_scale: ["per 10 mg/dL (=0.555 mmol/L)", "per fixed cohort SD (13.2768 mg/dL)"]
+  mean_glucose_form: "RCS 4 knots (same measurement set as GV)"
+  covariate_set: "MIMIC_CLINICAL_FIXED_V1"
+  missing_data: "MICE m=50 maxit=20 (PMM; Nelson-Aalen; event+time; no impute of outcome/exposure/HbA1c; deterministic duplicates excluded)"
+  standardization: "constants computed once in target cohort, frozen (results/standardization_constants.json, rebuild)"
+  ph_handling: "Schoenfeld per-term; GV violation -> interval average effects; continuous violation -> log(time) interaction"
+  bootstrap: "1000 patient-level for standardized absolute risk (Q75 vs Q25)"
+  interpretive_role: "UNIQUE PRIMARY ANALYSIS"
+  result: {HR_per10: 0.9794, CI: [0.9225, 1.0398], P: 0.4952}
+
+- model_id: MIMIC_KEYSECONDARY_B_365D
+  database: MIMIC-IV 3.1
+  cohort: "same as MIMIC_PRIMARY_B_30D (events 365d=745)"
+  analytic_frame: "MIMIC_GVONLY_LANDMARK_V1"
+  time_anchor: "surgical_date_index"
+  exposure_window: "[surgical_date_index 00:00, +24h)"
+  landmark: "index date + 24h"
+  outcome: "mortality by index day 365 among day-1 landmark survivors"
+  horizon: "index day 365"
+  model_family: "Cox proportional hazards"
+  formula: "Surv(t_lm_365, event_lm_365) ~ gv10 + rcs(mean_glu, 4 knots) + fixed clinical covariates"
+  exposure_scale: ["per 10 mg/dL", "per fixed cohort SD"]
+  mean_glucose_form: "RCS 4 knots"
+  covariate_set: "MIMIC_CLINICAL_FIXED_V1"
+  missing_data: "MICE m=50 (same object)"
+  ph_handling: "GV violates PH (P=0.006): interval average effects (1-7, 8-30, 31-365) + log(time) interaction"
+  interpretive_role: "KEY SECONDARY (single)"
+  result: {HR_per10: 0.9850, CI: [0.9420, 1.0299], P: 0.5062}
+
+- model_id: MIMIC_MODELC_30D
+  database: MIMIC-IV 3.1
+  analytic_frame: "MIMIC_GVONLY_LANDMARK_V1"
+  model_family: "Cox proportional hazards"
+  formula: "Model B + log(glucose_count) + span_hours + mutually exclusive source fractions (omit blood_gas)"
+  interpretive_role: "measurement-process context model (not full information-bias control)"
+  covariate_set: "MIMIC_CLINICAL_FIXED_V1 + MEASUREMENT_PROCESS_V1"
+  missing_data: "MICE m=50 (same object)"
+
+- model_id: INSPIRE_I2_30D_V5
+  database: INSPIRE 1.4.2
+  cohort: "adult, first high-specificity open CABG/valve, verified opend, >=2 quantized glucose timepoints in [opend,+24h), alive with follow-up at opend+24h landmark"
+  analytic_frame: "INSPIRE_OPEND_24H_LANDMARK_V2 (N=1353 after excluding 2 pre-landmark deaths; events=27)"
+  time_anchor: "verified opend_time (relative minutes)"
+  exposure_window: "[opend_time, +1440 min)"
+  landmark: "opend_time + 1440 min"
+  outcome: "30d_reconciled_composite_v3 + uniform_admin_registry_censoring_v5: composite death for events; common postoperative day-30 administrative end for non-events"
+  horizon: "postoperative day 30"
+  model_family: "Cox proportional hazards"
+  formula: "Surv(t30, event_30d) ~ gv10 + rcs(mean_glu, 4 knots) + age (EPV rule: 27 events)"
+  exposure: "quantized routine-laboratory SD-based GV (opend+0-24h frozen series)"
+  exposure_scale: ["per 10 mg/dL", "per fixed cohort SD (14.4580)"]
+  mean_glucose_form: "RCS 4 knots (identical series)"
+  covariate_set: "INSPIRE_CORE_EPV_V3 (age)"
+  missing_data: "complete-case on MODEL VARIABLES ONLY (v3; model variables have zero missing in frame)"
+  standardization: "constants frozen (results/standardization_constants.json, inspire)"
+  bootstrap: "1000 patient-level absolute risk"
+  interpretive_role: "secondary exact-timestamp cohort analysis (not formal external validation)"
+  result: {HR_per10: 0.9046, CI: [0.6526, 1.2539], P: 0.5471, N: 1353, events: 27}
+
+- model_id: INSPIRE_I2_365D_WITHDRAWN
+  database: INSPIRE 1.4.2
+  analytic_frame: "INSPIRE_OPEND_24H_LANDMARK_V2 (events=100)"
+  outcome: "WITHDRAWN: no common 365-day registry-coverage endpoint was established"
+  model_family: "Cox proportional hazards"
+  formula: "Surv(t365, event_365d) ~ gv10 + rcs(mean_glu, 4 knots) + INSPIRE_CLINICAL_FULL_V1"
+  covariate_set: "INSPIRE_CLINICAL_FULL_V1 (age, sex, diabetes, Charlson-wo-DM, ASA, emergency, procedure group, BMI)"
+  missing_data: "MICE m=50 maxit=20 (impute bmi, asa_num; loggedEvents=1 benign gv10 collinear)"
+  interpretive_role: "withdrawn; do not report HR, absolute risk, RMST, calibration, or performance"
+  result: {status: WITHDRAWN}
+
+- model_id: INSPIRE_48H_I2_30D_V5
+  database: INSPIRE 1.4.2
+  analytic_frame: "INSPIRE_OPEND_48H_LANDMARK_V2 (N=1511, events=31)"
+  exposure_window: "[opend_time, +2880 min)"
+  landmark: "opend_time + 2880 min (risk starts at 48h; exposure strictly before landmark)"
+  outcome: "30d_reconciled_composite_v3 + uniform_admin_registry_censoring_v5 in (48h landmark, day30]"
+  model_family: "Cox proportional hazards"
+  formula: "Surv(t30, event_30d) ~ gv10 + rcs(mean_glu, 4 knots at 48h-cohort quantiles) + age"
+  standardization: "constants computed once in 48h cohort, frozen (results/inspire_48h_constants.json)"
+  interpretive_role: "correct 48h landmark sensitivity; old overlapping 0-48h analysis superseded"
+  result: {HR_per10: 1.1044, CI: [0.846, 1.441], P: 0.4643}
+
+- model_id: EICU_HARMONIZED_M3
+  database: eICU-CRD 2.0
+  cohort: "harmonized CABG/open-valve/combined, first qualifying ICU stay, ICU-admission 0-1440 min glucose, 24h landmark, >=2 timepoints (N=7115, events=130, hospitals=67)"
+  outcome: "post-landmark hospital mortality"
+  model_family: "modified Poisson with cluster-robust variance (hospitalid)"
+  formula: "y ~ gv10 + age + sex + procedure_category + diabetes + creatinine + apachescore + ns(mean_glu, df=3)"
+  exposure_scale: "per 10 mg/dL"
+  interpretive_role: "multicenter harmonized comparison (NOT external validation; no pooling)"
+  result: {RR_per10: 1.158, CI: [1.025, 1.308], P: 0.019}
+
+- model_id: EICU_HARMONIZED_M4
+  database: eICU-CRD 2.0
+  formula: "M3 + log(glucose count) + measurement span"
+  interpretive_role: "measurement-process sensitivity of harmonized comparison"
+  result: {RR_per10: 1.133, CI: [0.990, 1.296], P: 0.069}
+
+- model_id: EICU_RANDINTERCEPT
+  database: eICU-CRD 2.0
+  model_family: "hospital random-intercept logistic (sensitivity)"
+  interpretive_role: "clustering sensitivity of harmonized comparison (convergence warning documented)"
+  result: {OR_per10: 1.167, CI: [1.036, 1.316], P: 0.011, N: 7115, events: 130, hospitals: 67}
+
+- model_id: SHRGV_J1_30D
+  database: MIMIC-IV 3.1
+  cohort: "strictly pre-index 1-90d HbA1c, day-1 landmark, >=2 glucose (N=4779, events 30d=99)"
+  analytic_frame: "MIMIC_SHRGV_JOINT_V1"
+  outcome: "mortality by index day 30 among day-1 landmark survivors"
+  model_family: "Cox proportional hazards"
+  formula: "Surv(t_lm_30, event_lm_30) ~ shr_zf + gv_zf + MIMIC_CLINICAL_FIXED_V1"
+  exposure: "SHR (= mean glucose/eAG) + SD-based GV, fixed joint-cohort constants"
+  joint_test: "J1 vs J0, 2-df D1 pooled Wald (Li-Raghunathan-Rubin, m=50)"
+  interpretive_role: "lead secondary test of prespecified SHR-GV joint module"
+  result: {joint_stat: 1.8442, df: 2, P: 0.1582}
+
+- model_id: SHRGV_J1_365D
+  database: MIMIC-IV 3.1
+  analytic_frame: "MIMIC_SHRGV_JOINT_V1 (events 365d=303)"
+  outcome: "mortality by index day 365 among day-1 landmark survivors"
+  joint_test: "2-df D1 pooled Wald"
+  interpretive_role: "key secondary test of joint module"
+  result: {joint_stat: 2.3382, df: 2, P: 0.0965}
+
+- model_id: SHRGV_D2_VS_D1_30D
+  database: MIMIC-IV 3.1
+  analytic_frame: "MIMIC_SHRGV_JOINT_V1"
+  formula: "D2 (RCS mean glucose + HbA1c + GV) vs D1 (RCS mean glucose + HbA1c): GV added-information test"
+  interpretive_role: "component decomposition (not mediation)"
+  result: {P: 0.948}
+
+- model_id: SHRGV_D2_VS_D1_365D
+  database: MIMIC-IV 3.1
+  analytic_frame: "MIMIC_SHRGV_JOINT_V1"
+  interpretive_role: "component decomposition at 365 days (not mediation)"
+  result: {P: 0.476}
+
+- model_id: SHRGV_I1_INTERACTION
+  database: MIMIC-IV 3.1
+  analytic_frame: "MIMIC_SHRGV_JOINT_V1"
+  formula: "centered SHR x centered GV interaction"
+  interpretive_role: "exploratory interaction"
+  result: {P_30d: 0.105, P_365d: 0.107}

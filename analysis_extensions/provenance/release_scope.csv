@@ -1,0 +1,12 @@
+category,path_or_item,status,reason
+original_public_code,tracked files at public repository HEAD,included,Code snapshot only; no Git history copied.
+extension_source,analysis_extensions/scripts and analysis_extensions/src,included,Phase 1.6 and Phase 2A-2C reproducibility code.
+aggregate_results,analysis_extensions/results/machine_readable,included,Aggregate tables with local paths sanitized to logical provenance labels.
+evidence_lock,analysis_extensions/results/evidence_lock,included,"Aggregate registry, landscape, figure map, and manuscript evidence map."
+candidate_figures,analysis_extensions/figures,included,Candidate and diagnostic figures; no patient-level source files.
+bootstrap_replicates,phase2a_same_patient_bootstrap.csv,excluded,Derived from real patient data; only the aggregate summary is shareable.
+patient_level_outputs,final_measurement_context.csv and reconstruction comparisons,excluded,Contains stay/patient-level identifiers or rows.
+reviewer_package,outputs/reviewer_data_package,excluded,Local reviewer package may contain controlled/pointer-only inputs and stays private.
+restricted_data,"MIMIC-IV, eICU-CRD, and INSPIRE raw/controlled inputs",excluded,Dataset terms and controlled-input boundary prohibit redistribution.
+manuscript_material,submission files and Phase 3 rewrite brief,excluded,No manuscript or submission material is part of the code release.
+local_state,"config.yaml, logs, manifests, and absolute-path records",excluded,Replaced by config.example.yaml and sanitized provenance.

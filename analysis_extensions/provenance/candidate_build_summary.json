@@ -1,0 +1,34 @@
+{
+  "candidate_root": "github_release_candidate",
+  "public_code_head": "634dc2c2dcd089b107d3cd702ee57a73278b6681",
+  "aggregate_result_files": [
+    "phase2_estimand_inventory.csv",
+    "phase2a_measurement_context_table.csv",
+    "phase2a_same_patient_agreement.csv",
+    "phase2a_same_patient_bootstrap_summary.csv",
+    "phase2a_sampling_process.csv",
+    "phase2a_source_model_reproduction.csv",
+    "phase2a_specification_shift.csv",
+    "phase2b_analytic_context_landscape.csv",
+    "phase2b_log_scale_agreement.csv",
+    "phase2b_result_provenance.csv",
+    "phase2b_source_sampling_imbalance.csv",
+    "phase2b_source_sampling_imbalance_summary.csv"
+  ],
+  "evidence_lock_files": [
+    "analytic_context_landscape_LOCKED.csv",
+    "figure_source_map_LOCKED.csv",
+    "manuscript_evidence_map.csv",
+    "master_evidence_registry.csv"
+  ],
+  "figures": [
+    "outputs/figures/candidate/phase2b_candidate_figure_A_source_dependence.png",
+    "outputs/figures/candidate/phase2b_candidate_figure_B_analytic_context_landscape.png",
+    "outputs/figures/diagnostic/same_patient_gv_scatter_primary.png",
+    "outputs/figures/diagnostic/same_patient_gv_bland_altman_primary.png"
+  ],
+  "excluded_bootstrap_replicates": true,
+  "excluded_patient_level_outputs": true,
+  "excluded_restricted_inputs": true,
+  "excluded_manuscript_files": true
+}

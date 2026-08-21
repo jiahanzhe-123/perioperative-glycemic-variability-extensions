@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Perioperative glucose variability after open cardiac surgery: analysis code for a multi-database cohort study"
+version: "1.0.1"
+date-released: "2026-08-04"
+authors:
+  - family-names: "Jia"
+    given-names: "Hanzhe"
+    email: "jhz0223@outlook.com"
+  - family-names: "Zhang"
+    given-names: "Hao"
+    email: "zhcuriosity@163.com"
+  - family-names: "Wang"
+    given-names: "Xin"
+    email: "happy97101@126.com"
+  - family-names: "Cao"
+    given-names: "Runde"
+    email: "13848749698@163.com"
+  - family-names: "Deng"
+    given-names: "Lin"
+    email: "denglin25@mail.sysu.edu.cn"
+  - family-names: "Sun"
+    given-names: "Yuanyuan"
+    email: "syy912@126.com"
+  - family-names: "Zhang"
+    given-names: "Xiaowei"
+    email: "taianrenxiaowei@126.com"
+  - family-names: "Ning"
+    given-names: "Xiang"
+    email: "iningxiang@qq.com"
+  - family-names: "Kuang"
+    given-names: "Jiangying"
+    email: "710887707@qq.com"
+keywords:
+  - glucose variability
+  - cardiac surgery
+  - critical care
+  - survival analysis
+  - MIMIC-IV
+  - eICU-CRD
+  - INSPIRE
+license: MIT
+repository-code: "https://github.com/jiahanzhe-123/perioperative-glycemic-variability"
+doi: "10.5281/zenodo.21791846"

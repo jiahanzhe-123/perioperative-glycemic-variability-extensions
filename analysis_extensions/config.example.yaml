@@ -1,0 +1,32 @@
+# Copy to config.yaml and replace every placeholder with an authorized local path.
+# config.yaml is ignored and must never be committed.
+public_code_root: /replace/with/your/public-code-root
+analysis_record_root: /replace/with/your/analysis-record-root
+controlled_package_root: /replace/with/your/controlled-package-root
+manuscript_provenance_root: /replace/with/your/manuscript-provenance-root
+historical_extension_root: /replace/with/your/historical-extension-root
+output_root: outputs
+random_seed: 20260809
+mimic_analysis_base: ./authorized_inputs/mimic_analysis_base.csv
+mimic_features_priority: ./authorized_inputs/mimic_features_priority.csv
+mimic_series_priority: ./authorized_inputs/mimic_series_priority.csv
+mimic_samepatient_source: ./authorized_inputs/mimic_samepatient_source.csv
+mimic_primary_results: ./authorized_inputs/mimic_primary_results.csv
+mimic_mice_results: ./authorized_inputs/mimic_mice_results.csv
+mimic_source_results: ./authorized_inputs/mimic_source_results.csv
+eicu_aggregate_input: ./authorized_inputs/eicu_aggregate_input.csv
+eicu_locked_results: ./authorized_inputs/eicu_locked_results.csv
+inspire_base: ./authorized_inputs/inspire_base.csv
+inspire_outcome_30d: ./authorized_inputs/inspire_outcome_30d.csv
+inspire_glucose_features_anchor: ./authorized_inputs/inspire_glucose_features_anchor.csv
+inspire_cohort_48h: ./authorized_inputs/inspire_cohort_48h.csv
+inspire_comorbidity: ./authorized_inputs/inspire_comorbidity.csv
+inspire_primary_results: ./authorized_inputs/inspire_primary_results.csv
+inspire_48h_results: ./authorized_inputs/inspire_48h_results.csv
+inspire_time_rule_qc: ./authorized_inputs/inspire_time_rule_qc.csv
+inspire_analysis_manifest: ./authorized_inputs/inspire_analysis_manifest.csv
+public_primary_model_script: ./authorized_code/public_primary_model_script
+public_source_builder_script: ./authorized_code/public_source_builder_script
+public_source_model_script: ./authorized_code/public_source_model_script
+public_eicu_model_script: ./authorized_code/public_eicu_model_script
+controlled_inspire_runner: ./authorized_code/controlled_inspire_runner

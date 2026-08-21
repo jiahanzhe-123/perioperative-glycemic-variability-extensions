@@ -1,0 +1,61 @@
+# 协变量集合定义(被 config/model_specifications.yml 以 ID 引用)
+
+MIMIC_CLINICAL_FIXED_V1:
+  description: "MIMIC 主分析固定临床条件变量(同期围术期临床严重度标记,非严格暴露前混杂)"
+  variables:
+    - age_at_admission
+    - gender
+    - bmi
+    - diabetes
+    - charlson_without_diabetes
+    - procedure_cat6
+    - lactate_postop_first
+    - creat_postop_first
+    - sofa_24h
+
+MIMIC_EXPANDED_V1:
+  description: "扩展敏感性模型附加变量(缺失较多或时序不清)"
+  variables:
+    - albumin_adm_first
+    - hgb_postop_first
+    - wbc_postop_first
+    - platelets_postop_first
+
+MEASUREMENT_PROCESS_V1:
+  description: "测量过程协变量(Model C)"
+  variables:
+    - log(glucose_count)
+    - span_hours
+    - frac_central_lab
+    - frac_poct
+    - frac_icu_charted
+  reference_omitted: frac_blood_gas
+
+INSPIRE_CORE_EPV_V3:
+  description: "INSPIRE 30 日 EPV 约简核心(27 事件)"
+  variables:
+    - age
+
+INSPIRE_CLINICAL_FULL_V1:
+  description: "INSPIRE 365 日全固定临床变量"
+  variables:
+    - age
+    - sex
+    - bmi
+    - diabetes
+    - charlson_without_diabetes
+    - asa_f
+    - emop_f
+    - surgery_group
+
+EICU_HARMONIZED_BASE:
+  variables:
+    - age
+    - sex
+    - procedure_category
+    - diabetes
+    - creatinine
+
+EICU_SEVERITY:
+  variables:
+    - apachescore
