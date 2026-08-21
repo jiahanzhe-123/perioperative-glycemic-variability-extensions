@@ -9,7 +9,7 @@ Analysis code for a multi-database cohort study of early postoperative glucose
 variability (GV) and mortality after open cardiac surgery.
 
 **This repository contains code only — no patient-level data.** See
-[DATA_AVAILABILITY.md](DATA_AVAILABILITY.md).
+[DATA_AVAILABILITY.md](../DATA_AVAILABILITY.md).
 
 ## Study purpose
 
@@ -104,7 +104,7 @@ access is governed by its controllers and institutional approvals.
 ## Run order
 
 What you can run depends on your access level
-([docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md) defines Levels 1–3):
+([REPRODUCIBILITY.md](REPRODUCIBILITY.md) defines Levels 1–3):
 
 ```bash
 make lint        # sensitive-info scan + config/schema checks (no data needed)
@@ -119,7 +119,7 @@ make figures     # regenerate manuscript figures from analysis outputs
 make all         # lint + test + synthetic + validate
 ```
 
-Detailed step-by-step order: [docs/ANALYSIS_WORKFLOW.md](docs/ANALYSIS_WORKFLOW.md).
+Detailed step-by-step order: [ANALYSIS_WORKFLOW.md](ANALYSIS_WORKFLOW.md).
 
 ## Synthetic example
 
@@ -134,8 +134,8 @@ modified-Poisson model → a figure, and writes outputs under
 ## Generating tables and figures
 
 - Manuscript tables/figures are produced by the scripts listed per exhibit in
-  [docs/RESULT_PROVENANCE.md](docs/RESULT_PROVENANCE.md) and
-  [docs/FINAL_OUTPUT_PROVENANCE.csv](docs/FINAL_OUTPUT_PROVENANCE.csv). The
+  [RESULT_PROVENANCE.md](RESULT_PROVENANCE.md) and
+  [FINAL_OUTPUT_PROVENANCE.csv](FINAL_OUTPUT_PROVENANCE.csv). The
   final figure builders live in
   `analyses/09_quality_control/figure_build/`.
 - `make figures` regenerates the figure set from existing analysis outputs.
@@ -159,14 +159,14 @@ written to `results/qc/frozen_validation_report.csv`.
 
 ## Citation
 
-See [CITATION.cff](CITATION.cff). The archived code record is
+See [CITATION.cff](../CITATION.cff). The archived code record is
 [10.5281/zenodo.21791846](https://doi.org/10.5281/zenodo.21791846); the
 version-specific Zenodo record for `v1.0.1` is
 [10.5281/zenodo.21791847](https://doi.org/10.5281/zenodo.21791847).
 
 ## License
 
-[MIT](LICENSE). Copyright is held by the Department of Cardiology, The Second
+[MIT](../LICENSE). Copyright is held by the Department of Cardiology, The Second
 Qilu Hospital, Cheeloo College of Medicine, Shandong University, Jinan, China.
 The license covers code only, not the datasets.
 
@@ -191,4 +191,4 @@ The license covers code only, not the datasets.
   interval-specific estimates are reported and must not be read as protection.
 - Glucose sampling is informative; measurement-process sensitivity models are
   provided and interpreted as such.
-- See [docs/OPEN_ISSUES.md](docs/OPEN_ISSUES.md) for unresolved items.
+- See [OPEN_ISSUES.md](OPEN_ISSUES.md) for unresolved items.
