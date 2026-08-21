@@ -96,7 +96,7 @@ computed once in its target cohort and frozen.
 ## Data requirements and versions
 
 You must independently obtain authorized access to MIMIC-IV 3.1, eICU-CRD 2.0,
-and INSPIRE 1.4.2 — see [DATA_AVAILABILITY.md](DATA_AVAILABILITY.md). The data
+and INSPIRE 1.4.2 — see [DATA_AVAILABILITY.md](../DATA_AVAILABILITY.md). The data
 use agreements for all three datasets prohibit redistribution, which is why no
 data can be included here. INSPIRE in particular is not a public database;
 access is governed by its controllers and institutional approvals.
