@@ -3,10 +3,15 @@ original_public_code,tracked files at public repository HEAD,included,Code snaps
 extension_source,analysis_extensions/scripts and analysis_extensions/src,included,Phase 1.6 and Phase 2A-2C reproducibility code.
 aggregate_results,analysis_extensions/results/machine_readable,included,Aggregate tables with local paths sanitized to logical provenance labels.
 evidence_lock,analysis_extensions/results/evidence_lock,included,"Aggregate registry, landscape, figure map, and manuscript evidence map."
-candidate_figures,analysis_extensions/figures,included,Candidate and diagnostic figures; no patient-level source files.
+candidate_figures,analysis_extensions/figures,included,Aggregate-safe candidate Figure 3 and framework assets only; patient-level source-derived scatter/Bland-Altman figures are excluded from this release.
+phase3b_aggregate_results,analysis_extensions/results/phase3b,included,"Final Phase 3B aggregate agreement, log-scale, count-closure, coefficient, and landscape source tables with logical provenance paths."
+phase3b_public_builder,analysis_extensions/scripts/phase3b/01_public_aggregate_landscape.R,included,"Rebuilds the aggregate Figure 3 landscape without accessing patient-level or controlled inputs."
+phase3b_public_figures,analysis_extensions/figures/phase3b,included,"Aggregate-safe Figure 1 and Figure 3 production files; Figure 2 patient-level source visual is controlled and excluded."
+phase3b_figure_provenance,analysis_extensions/provenance/phase3b,included,"Panel-level figure source map, build contract, and aggregate figure provenance."
+controlled_figure_derivatives,phase2b_candidate_figure_A_source_dependence.png and same_patient_gv_{scatter,bland_altman}_primary.png,excluded,"Derived from controlled patient-level source values; retained only in the local QA archive, not in the public repository."
 bootstrap_replicates,phase2a_same_patient_bootstrap.csv,excluded,Derived from real patient data; only the aggregate summary is shareable.
 patient_level_outputs,final_measurement_context.csv and reconstruction comparisons,excluded,Contains stay/patient-level identifiers or rows.
-reviewer_package,outputs/reviewer_data_package,excluded,Local reviewer package may contain controlled/pointer-only inputs and stays private.
+reviewer_package,local reviewer-oriented data package,excluded,"May contain controlled/pointer-only inputs and stays private."
 restricted_data,"MIMIC-IV, eICU-CRD, and INSPIRE raw/controlled inputs",excluded,Dataset terms and controlled-input boundary prohibit redistribution.
 manuscript_material,submission files and Phase 3 rewrite brief,excluded,No manuscript or submission material is part of the code release.
 local_state,"config.yaml, logs, manifests, and absolute-path records",excluded,Replaced by config.example.yaml and sanitized provenance.

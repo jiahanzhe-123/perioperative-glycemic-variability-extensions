@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='518.74pt' height='334.49pt' viewBox='0 0 518.74 334.49'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw1MTguNzR8MC4wMHwzMzQuNDk='>
+    <rect x='0.00' y='0.00' width='518.74' height='334.49' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw1MTguNzR8MC4wMHwzMzQuNDk=)'>
+<text x='259.37' y='25.56' text-anchor='middle' style='font-size: 13.00px; font-weight: bold; font-family: "Arial";' textLength='203.77px' lengthAdjust='spacingAndGlyphs'>Measurement-context framework</text>
+<text x='259.37' y='61.78' text-anchor='middle' style='font-size: 8.00px;fill: #333333; font-family: "Arial";' textLength='378.17px' lengthAdjust='spacingAndGlyphs'>Routine-care glucose records are transformed into context-specific GV summaries and outcome estimands</text>
+<polygon points='10.58,175.00 162.34,175.00 162.19,175.00 162.78,174.97 163.35,174.85 163.91,174.64 164.42,174.35 164.87,173.98 165.26,173.54 165.58,173.04 165.81,172.50 165.95,171.92 166.00,171.34 166.00,171.34 166.00,87.13 166.00,87.13 165.95,86.54 165.81,85.97 165.58,85.43 165.26,84.93 164.87,84.49 164.42,84.12 163.91,83.82 163.35,83.61 162.78,83.50 162.34,83.47 10.58,83.47 11.02,83.50 10.43,83.47 9.85,83.54 9.28,83.71 8.75,83.96 8.26,84.30 7.84,84.70 7.48,85.17 7.21,85.70 7.02,86.25 6.93,86.84 6.92,87.13 6.92,171.34 6.93,171.04 6.93,171.63 7.02,172.21 7.21,172.77 7.48,173.29 7.84,173.76 8.26,174.17 8.75,174.51 9.28,174.76 9.85,174.92 10.43,175.00 ' style='stroke-width: 0.75; stroke: #404040; fill: #F5F5F5;' />
+<text x='86.46' y='98.76' text-anchor='middle' style='font-size: 10.00px; font-weight: bold; font-family: "Arial";' textLength='42.22px' lengthAdjust='spacingAndGlyphs'>MIMIC-IV</text>
+<text x='86.46' y='116.96' text-anchor='middle' style='font-size: 7.40px;fill: #262626; font-family: "Arial";' textLength='119.16px' lengthAdjust='spacingAndGlyphs'>date-anchored perioperative window</text>
+<text x='86.46' y='127.62' text-anchor='middle' style='font-size: 7.40px;fill: #262626; font-family: "Arial";' textLength='96.17px' lengthAdjust='spacingAndGlyphs'>source-priority glucose series</text>
+<text x='86.46' y='138.27' text-anchor='middle' style='font-size: 7.40px;fill: #262626; font-family: "Arial";' textLength='50.95px' lengthAdjust='spacingAndGlyphs'>day-1 landmark</text>
+<text x='86.46' y='148.93' text-anchor='middle' style='font-size: 7.40px;fill: #262626; font-family: "Arial";' textLength='67.36px' lengthAdjust='spacingAndGlyphs'>30-day mortality; HR</text>
+<polygon points='183.49,175.00 335.25,175.00 335.10,175.00 335.69,174.97 336.27,174.85 336.82,174.64 337.33,174.35 337.79,173.98 338.18,173.54 338.49,173.04 338.72,172.50 338.86,171.92 338.91,171.34 338.91,171.34 338.91,87.13 338.91,87.13 338.86,86.54 338.72,85.97 338.49,85.43 338.18,84.93 337.79,84.49 337.33,84.12 336.82,83.82 336.27,83.61 335.69,83.50 335.25,83.47 183.49,83.47 183.93,83.50 183.34,83.47 182.76,83.54 182.19,83.71 181.66,83.96 181.18,84.30 180.75,84.70 180.40,85.17 180.12,85.70 179.94,86.25 179.84,86.84 179.83,87.13 179.83,171.34 179.84,171.04 179.84,171.63 179.94,172.21 180.12,172.77 180.40,173.29 180.75,173.76 181.18,174.17 181.66,174.51 182.19,174.76 182.76,174.92 183.34,175.00 ' style='stroke-width: 0.75; stroke: #404040; fill: #F5F5F5;' />
+<text x='259.37' y='98.76' text-anchor='middle' style='font-size: 10.00px; font-weight: bold; font-family: "Arial";' textLength='40.02px' lengthAdjust='spacingAndGlyphs'>INSPIRE</text>
+<text x='259.37' y='116.96' text-anchor='middle' style='font-size: 7.40px;fill: #262626; font-family: "Arial";' textLength='96.14px' lengthAdjust='spacingAndGlyphs'>verified operation-end anchor</text>
+<text x='259.37' y='127.62' text-anchor='middle' style='font-size: 7.40px;fill: #262626; font-family: "Arial";' textLength='98.58px' lengthAdjust='spacingAndGlyphs'>final retained glucose features</text>
+<text x='259.37' y='138.27' text-anchor='middle' style='font-size: 7.40px;fill: #262626; font-family: "Arial";' textLength='57.94px' lengthAdjust='spacingAndGlyphs'>24-hour landmark</text>
+<text x='259.37' y='148.93' text-anchor='middle' style='font-size: 7.40px;fill: #262626; font-family: "Arial";' textLength='67.36px' lengthAdjust='spacingAndGlyphs'>30-day mortality; HR</text>
+<polygon points='356.40,175.00 508.16,175.00 508.02,175.00 508.60,174.97 509.18,174.85 509.73,174.64 510.24,174.35 510.70,173.98 511.09,173.54 511.40,173.04 511.64,172.50 511.78,171.92 511.82,171.34 511.82,171.34 511.82,87.13 511.82,87.13 511.78,86.54 511.64,85.97 511.40,85.43 511.09,84.93 510.70,84.49 510.24,84.12 509.73,83.82 509.18,83.61 508.60,83.50 508.16,83.47 356.40,83.47 356.85,83.50 356.26,83.47 355.67,83.54 355.11,83.71 354.57,83.96 354.09,84.30 353.66,84.70 353.31,85.17 353.04,85.70 352.85,86.25 352.76,86.84 352.74,87.13 352.74,171.34 352.76,171.04 352.76,171.63 352.85,172.21 353.04,172.77 353.31,173.29 353.66,173.76 354.09,174.17 354.57,174.51 355.11,174.76 355.67,174.92 356.26,175.00 ' style='stroke-width: 0.75; stroke: #404040; fill: #F5F5F5;' />
+<text x='432.28' y='98.76' text-anchor='middle' style='font-size: 10.00px; font-weight: bold; font-family: "Arial";' textLength='47.77px' lengthAdjust='spacingAndGlyphs'>eICU-CRD</text>
+<text x='432.28' y='116.96' text-anchor='middle' style='font-size: 7.40px;fill: #262626; font-family: "Arial";' textLength='94.09px' lengthAdjust='spacingAndGlyphs'>preserved aggregate context</text>
+<text x='432.28' y='127.62' text-anchor='middle' style='font-size: 7.40px;fill: #262626; font-family: "Arial";' textLength='96.14px' lengthAdjust='spacingAndGlyphs'>all-source aggregate features</text>
+<text x='432.28' y='138.27' text-anchor='middle' style='font-size: 7.40px;fill: #262626; font-family: "Arial";' textLength='67.78px' lengthAdjust='spacingAndGlyphs'>post-landmark frame</text>
+<text x='432.28' y='148.93' text-anchor='middle' style='font-size: 7.40px;fill: #262626; font-family: "Arial";' textLength='70.22px' lengthAdjust='spacingAndGlyphs'>hospital mortality; RR</text>
+<text x='259.37' y='202.27' text-anchor='middle' style='font-size: 7.60px;fill: #B22222; font-family: "Arial";' textLength='318.94px' lengthAdjust='spacingAndGlyphs'>Each context changes one or more observed dimensions; no database is a validation hierarchy</text>
+<polygon points='8.41,289.64 95.33,289.64 95.25,289.63 95.60,289.62 95.94,289.55 96.27,289.42 96.58,289.25 96.85,289.03 97.08,288.76 97.27,288.46 97.41,288.14 97.49,287.80 97.52,287.45 97.52,287.45 97.52,237.09 97.52,237.09 97.49,236.74 97.41,236.40 97.27,236.07 97.08,235.78 96.85,235.51 96.58,235.29 96.27,235.11 95.94,234.99 95.60,234.92 95.33,234.90 8.41,234.90 8.68,234.92 8.33,234.90 7.98,234.95 7.64,235.04 7.32,235.20 7.03,235.40 6.78,235.64 6.56,235.92 6.40,236.23 6.29,236.57 6.23,236.92 6.22,237.09 6.22,287.45 6.23,287.27 6.23,287.62 6.29,287.97 6.40,288.31 6.56,288.62 6.78,288.90 7.03,289.14 7.32,289.34 7.64,289.49 7.98,289.59 8.33,289.63 ' style='stroke-width: 0.75; stroke: #36648B; fill: #FFFFFF;' />
+<text x='51.87' y='259.55' text-anchor='middle' style='font-size: 7.50px; font-weight: bold;fill: #36648B; font-family: "Arial";' textLength='24.59px' lengthAdjust='spacingAndGlyphs'>source</text>
+<text x='51.87' y='270.35' text-anchor='middle' style='font-size: 7.50px; font-weight: bold;fill: #36648B; font-family: "Arial";' textLength='44.56px' lengthAdjust='spacingAndGlyphs'>composition</text>
+<polygon points='112.16,289.64 199.08,289.64 198.99,289.63 199.35,289.62 199.69,289.55 200.02,289.42 200.33,289.25 200.60,289.03 200.83,288.76 201.02,288.46 201.16,288.14 201.24,287.80 201.27,287.45 201.27,287.45 201.27,237.09 201.27,237.09 201.24,236.74 201.16,236.40 201.02,236.07 200.83,235.78 200.60,235.51 200.33,235.29 200.02,235.11 199.69,234.99 199.35,234.92 199.08,234.90 112.16,234.90 112.43,234.92 112.07,234.90 111.72,234.95 111.39,235.04 111.07,235.20 110.78,235.40 110.52,235.64 110.31,235.92 110.15,236.23 110.04,236.57 109.98,236.92 109.97,237.09 109.97,287.45 109.98,287.27 109.98,287.62 110.04,287.97 110.15,288.31 110.31,288.62 110.52,288.90 110.78,289.14 111.07,289.34 111.39,289.49 111.72,289.59 112.07,289.63 ' style='stroke-width: 0.75; stroke: #36648B; fill: #FFFFFF;' />
+<text x='155.62' y='259.55' text-anchor='middle' style='font-size: 7.50px; font-weight: bold;fill: #36648B; font-family: "Arial";' textLength='32.91px' lengthAdjust='spacingAndGlyphs'>sampling</text>
+<text x='155.62' y='270.35' text-anchor='middle' style='font-size: 7.50px; font-weight: bold;fill: #36648B; font-family: "Arial";' textLength='41.64px' lengthAdjust='spacingAndGlyphs'>opportunity</text>
+<polygon points='215.91,289.64 302.83,289.64 302.74,289.63 303.09,289.62 303.44,289.55 303.77,289.42 304.07,289.25 304.35,289.03 304.58,288.76 304.77,288.46 304.91,288.14 304.99,287.80 305.02,287.45 305.02,287.45 305.02,237.09 305.02,237.09 304.99,236.74 304.91,236.40 304.77,236.07 304.58,235.78 304.35,235.51 304.07,235.29 303.77,235.11 303.44,234.99 303.09,234.92 302.83,234.90 215.91,234.90 216.17,234.92 215.82,234.90 215.47,234.95 215.13,235.04 214.82,235.20 214.53,235.40 214.27,235.64 214.06,235.92 213.90,236.23 213.78,236.57 213.73,236.92 213.72,237.09 213.72,287.45 213.73,287.27 213.73,287.62 213.78,287.97 213.90,288.31 214.06,288.62 214.27,288.90 214.53,289.14 214.82,289.34 215.13,289.49 215.47,289.59 215.82,289.63 ' style='stroke-width: 0.75; stroke: #36648B; fill: #FFFFFF;' />
+<text x='259.37' y='259.55' text-anchor='middle' style='font-size: 7.50px; font-weight: bold;fill: #36648B; font-family: "Arial";' textLength='33.34px' lengthAdjust='spacingAndGlyphs'>exposure</text>
+<text x='259.37' y='270.35' text-anchor='middle' style='font-size: 7.50px; font-weight: bold;fill: #36648B; font-family: "Arial";' textLength='27.47px' lengthAdjust='spacingAndGlyphs'>window</text>
+<polygon points='319.66,289.64 406.58,289.64 406.49,289.63 406.84,289.62 407.19,289.55 407.52,289.42 407.82,289.25 408.09,289.03 408.33,288.76 408.52,288.46 408.65,288.14 408.74,287.80 408.77,287.45 408.77,287.45 408.77,237.09 408.77,237.09 408.74,236.74 408.65,236.40 408.52,236.07 408.33,235.78 408.09,235.51 407.82,235.29 407.52,235.11 407.19,234.99 406.84,234.92 406.58,234.90 319.66,234.90 319.92,234.92 319.57,234.90 319.22,234.95 318.88,235.04 318.56,235.20 318.27,235.40 318.02,235.64 317.81,235.92 317.64,236.23 317.53,236.57 317.48,236.92 317.47,237.09 317.47,287.45 317.48,287.27 317.48,287.62 317.53,287.97 317.64,288.31 317.81,288.62 318.02,288.90 318.27,289.14 318.56,289.34 318.88,289.49 319.22,289.59 319.57,289.63 ' style='stroke-width: 0.75; stroke: #36648B; fill: #FFFFFF;' />
+<text x='363.12' y='259.55' text-anchor='middle' style='font-size: 7.50px; font-weight: bold;fill: #36648B; font-family: "Arial";' textLength='42.50px' lengthAdjust='spacingAndGlyphs'>time anchor</text>
+<text x='363.12' y='270.35' text-anchor='middle' style='font-size: 7.50px; font-weight: bold;fill: #36648B; font-family: "Arial";' textLength='48.75px' lengthAdjust='spacingAndGlyphs'>and landmark</text>
+<polygon points='423.41,289.64 510.33,289.64 510.24,289.63 510.59,289.62 510.94,289.55 511.26,289.42 511.57,289.25 511.84,289.03 512.08,288.76 512.26,288.46 512.40,288.14 512.49,287.80 512.52,287.45 512.52,287.45 512.52,237.09 512.52,237.09 512.49,236.74 512.40,236.40 512.26,236.07 512.08,235.78 511.84,235.51 511.57,235.29 511.26,235.11 510.94,234.99 510.59,234.92 510.33,234.90 423.41,234.90 423.67,234.92 423.32,234.90 422.97,234.95 422.63,235.04 422.31,235.20 422.02,235.40 421.77,235.64 421.56,235.92 421.39,236.23 421.28,236.57 421.22,236.92 421.22,237.09 421.22,287.45 421.22,287.27 421.22,287.62 421.28,287.97 421.39,288.31 421.56,288.62 421.77,288.90 422.02,289.14 422.31,289.34 422.63,289.49 422.97,289.59 423.32,289.63 ' style='stroke-width: 0.75; stroke: #36648B; fill: #FFFFFF;' />
+<text x='466.87' y='259.55' text-anchor='middle' style='font-size: 7.50px; font-weight: bold;fill: #36648B; font-family: "Arial";' textLength='46.66px' lengthAdjust='spacingAndGlyphs'>outcome and</text>
+<text x='466.87' y='270.35' text-anchor='middle' style='font-size: 7.50px; font-weight: bold;fill: #36648B; font-family: "Arial";' textLength='37.52px' lengthAdjust='spacingAndGlyphs'>effect type</text>
+<text x='259.37' y='323.76' text-anchor='middle' style='font-size: 7.20px;fill: #333333; font-family: "Arial";' textLength='421.61px' lengthAdjust='spacingAndGlyphs'>Interpretation: a GV coefficient is an estimate attached to a measurement and analytic context, not a context-free biological constant.</text>
+</g>
+</g>
+</svg>

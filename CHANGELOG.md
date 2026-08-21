@@ -3,6 +3,20 @@
 All notable changes to this repository are documented here. Scientific results
 are frozen; entries below concern code organization and release preparation only.
 
+## [1.1.0] — 2026-08-22 (JAHA v5 Phase 3B extension release candidate)
+
+- Added the final-lineage Phase 3B aggregate evidence bundle, including source
+  agreement, log-scale sensitivity, source-count closure, source-defined
+  coefficient summaries, and the 18-row SD-GV analytic-context landscape.
+- Added a public aggregate Figure 3 builder that reads only reviewed aggregate
+  rows and does not refit models or access patient/stay-level values.
+- Added aggregate-safe Figure 1 and Figure 3 files, panel-level source maps,
+  and figure provenance. The controlled Figure 2 patient-level scatter and
+  Bland–Altman source values remain excluded from the public repository.
+- Updated release metadata to repository version `v1.1.0` and extension package
+  citation version `0.2.0`. Archival DOI status remains pending until the
+  versioned release is created.
+
 ## [1.0.1] — 2026-08-04 (Zenodo archival release)
 
 - Added the Zenodo concept DOI [`10.5281/zenodo.21791846`](https://doi.org/10.5281/zenodo.21791846)

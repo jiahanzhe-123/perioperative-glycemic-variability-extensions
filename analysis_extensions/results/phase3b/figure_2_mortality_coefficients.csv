@@ -1,0 +1,4 @@
+metric,estimate,lower95,upper95,N,events,interpretation
+POCT-derived GV HR,0.758857245048576,0.638761960045579,0.90153195459796,409,49,source-defined HR
+Laboratory-derived GV HR,0.970897006154936,0.910334291034253,1.03548883728159,409,49,source-defined HR
+Paired exp(delta-beta),0.781604269286904,0.531376497575515,0.946350375549444,409,49,paired descriptive ratio; not an HR

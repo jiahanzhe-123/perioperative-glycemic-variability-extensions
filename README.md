@@ -1,6 +1,11 @@
-# Perioperative glycemic variability: JAHA v5 extension release
+# Perioperative glycemic variability: JAHA v5 extension release v1.1.0
 
 > This repository combines the tracked code snapshot from the original public release with the final-lineage JAHA v5 measurement-context extension package.
+
+> **Repository release v1.1.0 (2026-08-22).** This release adds the Phase 3B
+> manuscript-production evidence package: aggregate source-dependence closure,
+> the 18-row SD-GV analytic-context landscape, public aggregate figure code,
+> figure-source provenance, and an explicit controlled-data boundary.
 
 The original public code remains available at [jiahanzhe-123/perioperative-glycemic-variability](https://github.com/jiahanzhe-123/perioperative-glycemic-variability). The added package is under [`analysis_extensions/`](analysis_extensions/).
 
@@ -8,7 +13,8 @@ The original public code remains available at [jiahanzhe-123/perioperative-glyce
 
 - The original analysis code, synthetic workflow, tests, and aggregate QC records.
 - Phase 1.6 and Phase 2A-2C source code.
-- Aggregate, provenance-bearing extension results and candidate figures.
+- Aggregate, provenance-bearing extension results and candidate figures,
+  including the public Figure 3 aggregate builder and final Phase 3B source map.
 
 No patient/stay-level records, restricted raw or controlled inputs, real-data bootstrap replicates, manuscript files, local configuration, logs, or absolute-path manifests are included. The private reviewer data package remains local.
 
@@ -177,7 +183,7 @@ written to `results/qc/frozen_validation_report.csv`.
 
 See [CITATION.cff](CITATION.cff). The archived code record is
 [10.5281/zenodo.21791846](https://doi.org/10.5281/zenodo.21791846); the
-version-specific Zenodo record for `v1.0.1` is
+version-specific Zenodo record for the original `v1.0.1` snapshot is
 [10.5281/zenodo.21791847](https://doi.org/10.5281/zenodo.21791847).
 
 ## License

@@ -1,0 +1,3 @@
+Public builder completed from 18 aggregate SD-GV rows.
+No model was refit; no patient-level source values were read.
+MIMIC/INSPIRE rows are HRs and eICU rows are RRs; results are not pooled.

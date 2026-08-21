@@ -1,7 +1,8 @@
 # Release Checklist
 
-Status: **PUBLIC CODE RELEASE v1.0.1 (2026-08-04)**. The code is public before
-journal submission and is archived in Zenodo.
+Status: **RELEASE CANDIDATE v1.1.0 (2026-08-22)**. The original v1.0.1
+snapshot remains archived; the Phase 3B extension bundle is prepared for
+repository release and archival review.
 
 ## 1. Code audit
 - [x] All scripts inventoried (`docs/CODE_INVENTORY.md`)
@@ -55,7 +56,14 @@ journal submission and is archived in Zenodo.
       (lint; tests + synthetic; docs). Runs `30915718898`, `30915721243`, and
       `30915721274`.
 
-## 8. Release mechanics
+## 8. Phase 3B extension checks
+- [x] Public aggregate Phase 3B source tables copied with logical provenance paths
+- [x] Patient-level Figure 2 source values excluded from the public release tier
+- [x] Public aggregate Figure 3 builder added and limited to 18 aggregate rows
+- [x] Final Figure 1/Figure 3 aggregate-safe files and panel-level source map added
+- [x] Release manifest and file-hash manifest prepared in the controlled workspace
+
+## 9. Release mechanics
 - [x] Create private GitHub repo first
 - [ ] **[AUTHOR]** Invite a co-author to review
 - [x] Tags `v1.0.0` and `v1.0.1` created after the technical and privacy checks

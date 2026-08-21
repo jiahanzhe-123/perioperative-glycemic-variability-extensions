@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "package": "JAHA v5 Phase 3B measurement-context extension",
+  "release_status": "RELEASE_CANDIDATE_QA_PASS_PENDING_GITHUB_RELEASE",
+  "release_date": "2026-08-22",
+  "repository": {
+    "url": "https://github.com/jiahanzhe-123/perioperative-glycemic-variability-extensions",
+    "tag": "v1.1.0",
+    "commit": "PENDING",
+    "release_url": "https://github.com/jiahanzhe-123/perioperative-glycemic-variability-extensions/releases/tag/v1.1.0"
+  },
+  "controlled_data_boundary": {
+    "patient_level_data_included": false,
+    "controlled_inputs_included": false,
+    "real_bootstrap_replicates_included": false,
+    "figure_2_patient_level_source_rows_public": false,
+    "patient_level_derived_source_figures_public": false,
+    "note": "Figure 2 source rows and derived scatter/Bland-Altman figures remain in the controlled local production package; only aggregate coefficient summaries are public."
+  },
+  "public_included": [
+    "analysis_extensions/scripts/phase2a/",
+    "analysis_extensions/scripts/phase2b/",
+    "analysis_extensions/scripts/phase2c/",
+    "analysis_extensions/scripts/phase3b/01_public_aggregate_landscape.R",
+    "analysis_extensions/results/ aggregate and evidence-lock tables with logical provenance labels",
+    "analysis_extensions/figures/phase3b/ aggregate-safe Figure 1 and Figure 3 files",
+    "analysis_extensions/figures/phase3b_public/ reproducible aggregate Figure 3 output",
+    "analysis_extensions/provenance/phase3b/ figure contracts, source map, and file manifest",
+    "synthetic inputs, tests, and aggregate QC records from the original public code"
+  ],
+  "public_excluded": [
+    "MIMIC-IV, INSPIRE, and eICU-CRD raw or controlled inputs",
+    "patient/stay-level rows and identifiers",
+    "real-data bootstrap replicate files",
+    "Figure 2 patient-level scatter/Bland-Altman source values and derived point-level figures",
+    "final manuscript and supplemental submission files",
+    "local absolute-path manifests, credentials, and logs"
+  ],
+  "public_reproduction_checks": {
+    "sensitive_scan": "PASS",
+    "config_schema_check": "PASS",
+    "python_unit_tests": "17 passed, 6 skipped",
+    "r_unit_tests": "ALL R TESTS PASSED",
+    "synthetic_workflow": "PASS: N=400 events=3",
+    "aggregate_figure_builder": "PASS: one-page Figure_3_public output",
+    "full_authorized_result_validation": "UNRESOLVED_AUTHORIZED_DATA_REQUIRED"
+  },
+  "release_file_manifest": "analysis_extensions/provenance/phase3b/release_file_manifest.csv",
+  "zenodo": {
+    "status": "NOT_VERIFIED",
+    "doi": null,
+    "note": "No DOI is inferred; status will be changed only after an actual versioned archive record is verified."
+  }
+}

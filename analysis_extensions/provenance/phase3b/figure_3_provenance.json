@@ -1,0 +1,39 @@
+{
+  "figure": "Figure 3",
+  "status": "CANDIDATE_PRODUCTION_PHASE3B",
+  "backend": "R",
+  "r_version": "4.5.0",
+  "generated_date": "2026-08-22",
+  "analysis_status": "No model was refit; values were read from locked Phase 2A/2B outputs.",
+  "core_conclusion": "Adjustment, source, timing, and database-specific contexts yield context-specific coefficients that should not be pooled or interpreted as a single transportable effect.",
+  "panel_contract": {
+    "archetype": "quantitative grid",
+    "core_conclusion": "Adjustment, source, timing, and database-specific contexts yield context-specific coefficients that should not be pooled or interpreted as a single transportable effect.",
+    "panels": ["A: MIMIC Models A/B/C", "B: MIMIC priority/source contexts including visually paired same-patient rows", "C: INSPIRE I1/I2/I3 and corrected 48-hour landmark", "D: eICU M1-M4"],
+    "statistics": "18 locked SD-GV rows; MIMIC/INSPIRE shown as HR and eICU shown as RR; N/events printed beside each row.",
+    "visual_boundary": "Rows are ordered conceptually, not by effect size. No pooling, common summary effect, or formal cross-database heterogeneity test is shown."
+  },
+  "source_data_file": "outputs/phase3b/figure_source_data/figure_3_source_data.csv",
+  "source_data_sha256": "57868ecb95481c19ca04ada480e38b501c363814d88f0a32dcb2a9adf6f0de92",
+  "locked_inputs": [
+    {
+      "path": "outputs/evidence_lock/analytic_context_landscape_LOCKED.csv",
+      "sha256": "dd167892d5ba1777ab2d7e5bb1de0b9f95520ba8a1075cc7cb7b3226c057a5ff"
+    },
+    {
+      "path": "outputs/evidence_lock/master_evidence_registry.csv",
+      "sha256": "876a38928d299bf2621d9bb98f130fe4089e816fca86938b5f302463b7aafa58"
+    }
+  ],
+  "build_script": "scripts/phase3b/phase3b_figures.R",
+  "build_script_sha256": "cdaf214ff8535e83278becf3f9cc4983ae2e57660e2778778645c50cd33b5b90",
+  "N": null,
+  "events": null,
+  "output_sha256": {
+    "Figure_3.svg": "70e3836a5c403046ca8d75459d571413961e8e933badb53cf1cd78531680e15e",
+    "Figure_3.pdf": "12deee75753415ee4d68b9bb941424fd52a7d6bf26d584d47cae4083eda5a7d9",
+    "Figure_3.tiff": "a135f9c6b1755fd4090705fc7779f0319778ea7dedaf3fdf177c428474328aaf",
+    "Figure_3.png": "44fa947f3fd6915ecf10a27eaf90c68497a1418442f45789d2ae1c8a14462e4f"
+  },
+  "public_release_boundary": "Patient-level source data and controlled inputs are excluded from the public release tier."
+}

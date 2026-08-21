@@ -1,6 +1,6 @@
 # Privacy Review
 
-Date: 2026-08-04 (release candidate). Reviewer: automated scan + manual audit.
+Date: 2026-08-22 (v1.1.0 release candidate). Reviewer: automated scan + manual audit.
 
 ## Automated controls
 
@@ -35,7 +35,8 @@ Date: 2026-08-04 (release candidate). Reviewer: automated scan + manual audit.
    (seed 20260726) and not derived from real records.
 4. **Aggregate results** — `results/qc/` and `tests/expected/frozen_results.yml`
    contain only aggregate counts and effect estimates already public in the
-   manuscript; no small-cell patient-level information.
+   manuscript; the reviewed Phase 3B bundle adds only aggregate extension rows
+   and logical provenance labels; no small-cell patient-level information.
 5. **Git history** — this repository is a fresh import (no legacy git history).
    The legacy workspaces were never published; a history-leak scan is therefore
    not applicable to the public repo. **[AUTHOR ACTION: when creating the
@@ -54,3 +55,14 @@ Date: 2026-08-04 (release candidate). Reviewer: automated scan + manual audit.
   outputs out of public channels; the repo's `.gitignore` does not protect a
   user's separate clone after they add real data. This is called out in
   `CONTRIBUTING.md`.
+
+## Phase 3B extension boundary
+
+- The public Phase 3B bundle contains only aggregate landscape rows, aggregate
+  source-agreement summaries, the coefficient summary, sanitized logical
+  provenance paths, and an R builder for the aggregate Figure 3.
+- The local Figure 2 scatter/Bland–Altman source values and final manuscript
+  files remain controlled and are not copied into the repository.
+- A repository-wide scan was rerun after adding the Phase 3B files; no user
+  home paths, credentials, restricted inputs, patient/stay identifiers, or
+  real-data bootstrap replicates were added to tracked text/source files.

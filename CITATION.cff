@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 title: "Perioperative glucose variability after open cardiac surgery: analysis code for a multi-database cohort study"
-version: "1.0.1"
-date-released: "2026-08-04"
+version: "1.1.0"
+date-released: "2026-08-22"
 authors:
   - family-names: "Jia"
     given-names: "Hanzhe"
@@ -40,5 +40,4 @@ keywords:
   - eICU-CRD
   - INSPIRE
 license: MIT
-repository-code: "https://github.com/jiahanzhe-123/perioperative-glycemic-variability"
-doi: "10.5281/zenodo.21791846"
+repository-code: "https://github.com/jiahanzhe-123/perioperative-glycemic-variability-extensions"

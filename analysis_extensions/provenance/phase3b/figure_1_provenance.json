@@ -1,0 +1,39 @@
+{
+  "figure": "Figure 1",
+  "status": "CANDIDATE_PRODUCTION_PHASE3B",
+  "backend": "R",
+  "r_version": "4.5.0",
+  "generated_date": "2026-08-22",
+  "analysis_status": "No model was refit; values were read from locked Phase 2A/2B outputs.",
+  "core_conclusion": "Routine-care GV estimates are attached to observed database, source, sampling, timing, outcome, and effect-type contexts.",
+  "panel_contract": {
+    "archetype": "schematic-led composite",
+    "core_conclusion": "Routine-care GV estimates are attached to observed database, source, sampling, timing, outcome, and effect-type contexts.",
+    "panels": ["three database context boxes", "five shared context dimensions"],
+    "statistical_definition": "No effect estimates; framework only.",
+    "visual_boundary": "The figure does not imply that any database or source is a reference standard."
+  },
+  "source_data_file": "outputs/phase3b/figure_source_data/figure_1_source_data.csv",
+  "source_data_sha256": "e82068777cfbc33fb1cb7176ecd4e4e879d8a3dd9382ba7068707cb9cd8c9bdd",
+  "locked_inputs": [
+    {
+      "path": "outputs/machine_readable/final_measurement_context.csv",
+      "sha256": "42c6f774425c62c303a456501a27f06c17ce17eae2f98b0e423ca855eef79c88"
+    },
+    {
+      "path": "outputs/evidence_lock/figure_source_map_LOCKED.csv",
+      "sha256": "ccad8bcf6986dbbed8d48197cf74051cd5cf05c33ea991a44380737bc73166e6"
+    }
+  ],
+  "build_script": "scripts/phase3b/phase3b_figures.R",
+  "build_script_sha256": "cdaf214ff8535e83278becf3f9cc4983ae2e57660e2778778645c50cd33b5b90",
+  "N": null,
+  "events": null,
+  "output_sha256": {
+    "Figure_1.svg": "0414af405e28e10698b6a30055668e1049a58c165883163e8ec222e62757bf24",
+    "Figure_1.pdf": "aee234d5afca8241e6a7f0d914d2439357097c2bdb9d79d2ff586e556a1352a4",
+    "Figure_1.tiff": "39b45d7bad4c7faadaef747a3200f2f08114f48cdb5d0affe676c03ac2804579",
+    "Figure_1.png": "e526c4310a8e642fada42071e647cc26374c4030545e7d0169bdbe7c74705464"
+  },
+  "public_release_boundary": "Patient-level source data and controlled inputs are excluded from the public release tier."
+}
