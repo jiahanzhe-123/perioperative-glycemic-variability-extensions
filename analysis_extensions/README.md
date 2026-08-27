@@ -1,6 +1,6 @@
 # JAHA v5 analysis extensions
 
-This directory contains the final-lineage extension code and aggregate evidence package for the measurement-context analysis. It includes Phase 1.6 lineage checks, Phase 2A measurement-context analyses, Phase 2B analytic-context landscape analyses, Phase 2C evidence-lock assembly, and the Phase 3B public aggregate production layer. The repository release is `v1.1.0`; the extension package citation version is `0.2.0`.
+This directory contains the final-lineage extension code and aggregate evidence package for the measurement-context analysis. It includes Phase 1.6 lineage checks, Phase 2A measurement-context analyses, Phase 2B analytic-context landscape analyses, Phase 2C evidence-lock assembly, the Phase 3B public aggregate production layer, and the v1.1.1 event-limited sensitivity bundle. The v1.1.1 release preserves the v1.1.0 materials and adds the event-limited sensitivity bundle.
 
 ## Public-release boundary
 
@@ -27,6 +27,17 @@ The locked aggregate outputs in `results/` are provenance-bearing records, not s
 - `figures/phase3b/`: aggregate-safe Figure 1 and Figure 3 production files.
 - `figures/phase3b_public/`: output location for the public aggregate builder.
 - `provenance/phase3b/FINAL_FIGURE_SOURCE_MAP.csv`: panel-level source map.
+
+## Event-limited sensitivity bundle
+
+- `results/phase3b/anaesthesia_new_sensitivities/`: aggregate sensitivity
+  results, bootstrap summaries, the at-least-three-measurement MICE result and
+  the QC record.
+- `scripts/phase3b/run_anaesthesia_new_sensitivities.R`: locked runner. It
+  requires authorised local inputs specified through a private `config.yaml`;
+  those inputs are not part of this release.
+- `provenance/phase3b/ANAESTHESIA_NEW_SENSITIVITY_LOCK.md`: analysis lock and
+  interpretation boundary.
 
 ## Interpretation boundary
 

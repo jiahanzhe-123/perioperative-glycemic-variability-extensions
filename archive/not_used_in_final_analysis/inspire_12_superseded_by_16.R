@@ -2,9 +2,9 @@
 # 12_inspire_sensitivity.R — 时间锚点敏感性(完全相同样本)与量化分辨率敏感性(协议 §7/§8)
 rm(list=ls()); options(stringsAsFactors=FALSE, scipen=999)
 SEED <- 20260726L; set.seed(SEED)
-.libPaths(c("~/cardiac_glucose_rebuild_20260728/rlib", .libPaths()))
+.libPaths(c(file.path("private", "r-library"), .libPaths()))
 suppressMessages({library(survival); library(jsonlite); library(rms)})
-ROOT <- normalizePath("~/inspire_cardiac_20260729")
+ROOT <- normalizePath(file.path("private", "inspire_project"), mustWork=FALSE)
 sink(file.path(ROOT,"logs","12_inspire_sensitivity.log"), split=TRUE)
 
 b <- read.csv(file.path(ROOT,"data","inspire_base.csv"), stringsAsFactors=FALSE)

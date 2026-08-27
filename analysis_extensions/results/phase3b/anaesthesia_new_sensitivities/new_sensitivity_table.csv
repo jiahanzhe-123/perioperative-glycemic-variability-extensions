@@ -1,0 +1,8 @@
+"Sensitivity analysis","N/events","Estimate (95% CI)","p value","Interpretation"
+"Parsimonious Cox: POCT-derived GV HR","409/49","0.822 (0.705 to 0.959)","0.012","Reduced covariate complexity"
+"Parsimonious Cox: laboratory-derived GV HR","409/49","0.988 (0.931 to 1.050)","0.704","Reduced covariate complexity"
+"Parsimonious Cox: paired Δβ (POCT minus laboratory)","409/49","-0.184 (-0.454 to -0.031)","not estimated","Bootstrap percentile interval; not an HR"
+"Ridge Cox: POCT-derived GV HR","409/49","0.999 (0.989 to 1.010)","not estimated","λ.1se penalised coefficient; bootstrap interval"
+"Ridge Cox: laboratory-derived GV HR","409/49","1.007 (1.002 to 1.012)","not estimated","λ.1se penalised coefficient; bootstrap interval"
+"Ridge Cox: paired Δβ (POCT minus laboratory)","409/49","-0.008 (-0.018 to 0.002)","not estimated","Bootstrap percentile interval; not an HR"
+"MIMIC Model B: at least 3 retained measurements","10398/272","0.974 (0.914 to 1.038)","0.416","MICE m=50; Rubin pooling"

@@ -1,0 +1,46 @@
+{
+  "release_candidate": "v1.1.1",
+  "run_status": "COMPLETED",
+  "lock_status": "LOCKED_BEFORE_RUN",
+  "lock_date": "2026-08-27",
+  "script": "analysis_extensions/scripts/phase3b/run_anaesthesia_new_sensitivities.R",
+  "script_sha256": "ab074c4712ce3d14c08010ebe9f9a611bc9ad7ae9e7bb0707629022be3fdad3f",
+  "controlled_input_paths_included": false,
+  "controlled_input_hashes": {
+    "analysis_base": "2163168d1c2cf07828dd10d3b79392ca94545fbf36e7fd68dcd9d2675eeefba4",
+    "features_priority": "649dcf92d9f2fa35bab2521b123d54b1390ec508c1724ab8911ba1d0e599d906",
+    "samepatient_source": "9ff80386a5145f4cdc664a1ffe67db0e43a2bda08c93351bd81d6a9623b8774c",
+    "standardization_constants": "f67cda9ad42193e07472d979f44984284545b70fa8932b02e2fc99bae4d9e27e",
+    "locked_primary_results": "41c6a64f707f40518b5c809e67b26b23e9b3ade65ddea82708d5c5c1ce1c4d0a",
+    "locked_source_results": "ebb489c3f31bc879aa24e9ce98b6b5da66232a0312700c9ba237153c87180909"
+  },
+  "seeds": {
+    "mice_ge3": 20260827,
+    "parsimonious_bootstrap": 20260928,
+    "ridge_cv_folds": 20260929,
+    "ridge_bootstrap": 20260930
+  },
+  "bootstrap": {
+    "requested_successful": 2000,
+    "parsimonious_attempts": 2000,
+    "parsimonious_successful": 2000,
+    "ridge_attempts": 2000,
+    "ridge_successful": 2000
+  },
+  "fingerprints": {
+    "primary_target_N": 10561,
+    "primary_target_events": 296,
+    "paired_complete_case_N": 409,
+    "paired_complete_case_events": 49,
+    "ge3_target_N": 10398,
+    "ge3_target_events": 272
+  },
+  "public_output_files": [
+    "analysis_extensions/results/phase3b/anaesthesia_new_sensitivities/new_sensitivity_results.csv",
+    "analysis_extensions/results/phase3b/anaesthesia_new_sensitivities/new_sensitivity_paired_bootstrap.csv",
+    "analysis_extensions/results/phase3b/anaesthesia_new_sensitivities/new_sensitivity_mimic_ge3_mice.csv",
+    "analysis_extensions/results/phase3b/anaesthesia_new_sensitivities/new_sensitivity_table.csv",
+    "analysis_extensions/results/phase3b/anaesthesia_new_sensitivities/new_sensitivity_qc.md"
+  ],
+  "privacy_boundary": "No patient-level rows, real-data bootstrap replicates, credentials, logs or local absolute paths are included."
+}

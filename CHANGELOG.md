@@ -3,6 +3,18 @@
 All notable changes to this repository are documented here. Scientific results
 are frozen; entries below concern code organization and release preparation only.
 
+## [1.1.1] — 2026-08-27 (post hoc sensitivity bundle)
+
+- Added the pre-run lock, runner, aggregate results, run manifest summary and QC
+  record for three event-limited sensitivity analyses: a parsimonious same-patient
+  Cox model, a ridge-penalised same-patient Cox model, and a priority-series
+  MIMIC Model B analysis requiring at least three retained glucose measurements.
+- Preserved the v1.1.0 release unchanged. No new patient/stay-level records,
+  real-data bootstrap replicates, controlled inputs, or local absolute paths are
+  included.
+- Published as GitHub tag `v1.1.1`. No versioned archival DOI is claimed without
+  an independently verified archive record.
+
 ## [1.1.0] — 2026-08-22 (JAHA v5 Phase 3B extension release)
 
 - Added the final-lineage Phase 3B aggregate evidence bundle, including source
@@ -15,7 +27,8 @@ are frozen; entries below concern code organization and release preparation only
   Bland–Altman source values remain excluded from the public repository.
 - Updated release metadata to repository version `v1.1.0` and extension package
   citation version `0.2.0`. The GitHub release is published; no new archival DOI
-  is claimed for v1.1.0 until a versioned archive record is independently verified.
+  is claimed for v1.1.0 until a versioned archive record is independently
+  verified.
 
 ## [1.0.1] — 2026-08-04 (Zenodo archival release)
 

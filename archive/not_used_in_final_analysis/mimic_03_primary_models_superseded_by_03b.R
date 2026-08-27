@@ -9,9 +9,9 @@
 # 效应尺度:per-10 mg/dL(模型内 gv10)与 per-固定队列SD(由 gv10 系数精确换算,P 不变)。
 rm(list=ls()); options(stringsAsFactors=FALSE, scipen=999)
 SEED <- 20260726L; set.seed(SEED)
-.libPaths(c("~/cardiac_glucose_rebuild_20260728/rlib", .libPaths()))
+.libPaths(c(file.path("private", "r-library"), .libPaths()))
 suppressMessages({library(survival); library(mice); library(jsonlite)})
-ROOT <- normalizePath("~/cardiac_glucose_rebuild_20260728")
+ROOT <- normalizePath(file.path("private", "mimic_project"), mustWork=FALSE)
 dir.create(file.path(ROOT,"results"), showWarnings=FALSE, recursive=TRUE)
 sink(file.path(ROOT,"logs/03_primary_models.log"), split=TRUE)
 

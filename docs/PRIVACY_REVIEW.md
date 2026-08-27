@@ -1,13 +1,13 @@
 # Privacy Review
 
-Date: 2026-08-22 (v1.1.0 public GitHub release). Reviewer: automated scan + manual audit.
+Date: 2026-08-27 (v1.1.1 release review). Reviewer: automated scan + manual audit.
 
 ## Automated controls
 
 - `scripts/sensitive_scan.py` (run via `make lint` and CI) scans the working
-  tree for: credential patterns, PostgreSQL password literals, `/Users/…` and
-  `/home/…` paths, `/Volumes/…` paths, internal server addresses, private IPv4
-  ranges, SSH private-key headers, and files > 2 MB. Result at freeze: **PASS**.
+  tree for credential patterns, PostgreSQL password literals, user-home and
+  mounted-volume paths, internal server addresses, private IPv4 ranges,
+  SSH private-key headers, and files > 2 MB. Result at freeze: **PASS**.
 - `.gitignore` blocks `data/` (except `data/synthetic/`), `results/` (except
   aggregate `results/qc/`), `config/paths.yml`, `.env*`, credential
   directories, and binary analysis artifacts (`*.rds`, `*.RData`, `*.pkl`,
@@ -16,20 +16,14 @@ Date: 2026-08-22 (v1.1.0 public GitHub release). Reviewer: automated scan + manu
 ## Manual audit findings
 
 1. **Original local paths in the migration map** — `docs/FILE_MIGRATION_MAP.csv`
-   originally recorded source paths under the author's home directory. These
-   were sanitized to `~/…` form. The unsanitized map remains only in the local
-   (non-public) workspace.
-2. **Database credentials in legacy scripts** — internal scripts contained a
-   PostgreSQL password for the local INSPIRE instance. During migration all
-   credential literals were replaced with `[REDACTED-CREDENTIAL]` and
-   connection details moved to `config/paths.yml` (git-ignored). The affected
-   role was confirmed as `postgres` on the local Docker instance `inspire-pg`
-   (database `inspire_v142`, host port 5434); the other local containers expose
-   the same built-in role but were not implicated by the legacy credential
-   finding. The password was rotated on 2026-08-04 using psql's interactive
-   `\password` command. A TCP connection test succeeded with the new local
-   credential. The new password is stored only in the ignored local
-   `config/paths.yml`; it is not recorded in this repository or report.
+   records source-path identifiers and repository-relative destinations only.
+   Private source paths are redacted in the public release; the
+   unsanitized map remains only in the local (non-public) workspace.
+2. **Database credentials in legacy scripts** — internal scripts contained
+   credential literals. During migration all credential literals were replaced
+   with `[REDACTED-CREDENTIAL]` and connection details moved to ignored local
+   configuration. No credential or local connection detail is recorded in this
+   repository or report.
 3. **Patient-level data** — no patient-level or stay-level records are present
    in the repository. Synthetic data in `data/synthetic/` are simulated
    (seed 20260726) and not derived from real records.
@@ -61,7 +55,7 @@ Date: 2026-08-22 (v1.1.0 public GitHub release). Reviewer: automated scan + manu
 - The public Phase 3B bundle contains only aggregate landscape rows, aggregate
   source-agreement summaries, the coefficient summary, sanitized logical
   provenance paths, and an R builder for the aggregate Figure 3.
-- The local Figure 2 scatter/Bland–Altman source values and final manuscript
+- The controlled Figure 2 scatter/Bland–Altman source values and final manuscript
   files remain controlled and are not copied into the repository.
 - A repository-wide scan was rerun after adding the Phase 3B files; no user
   home paths, credentials, restricted inputs, patient/stay identifiers, or

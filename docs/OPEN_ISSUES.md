@@ -6,7 +6,7 @@ pushed to the public remote
 `jiahanzhe-123/perioperative-glycemic-variability`. All three GitHub Actions
 workflows pass on the frozen review commit.
 
-## Resolved in the current release candidate
+## Resolved in the current public release
 
 - The canonical repository is the single editable copy. The desktop copy is a
   read-only backup and is not part of this repository.

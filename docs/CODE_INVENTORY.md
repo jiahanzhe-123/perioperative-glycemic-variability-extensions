@@ -6,7 +6,7 @@
 
 ## A. MIMIC-IV 主分析链(数据库:MIMIC-IV v3.1)
 
-### A1. 数据提取与队列(SQL,原始项目 `~/Documents/Codex/2026-07-18/volumes-mimic-data/scripts/`)
+### A1. 数据提取与队列(SQL, private source path redacted)
 
 | 原路径 | 功能 | 状态 | 建议新路径 |
 |---|---|---|---|
@@ -24,7 +24,7 @@
 | scripts/11_build_qc_report.sql | QC 报告 | USED-FINAL | sql/mimic/11_build_qc_report.sql |
 | (github_release)sql/mimic/12_bloodonly_glucose_patch.sql | 尿糖排除补丁(283 患者) | USED-FINAL | sql/mimic/12_bloodonly_glucose_patch.sql |
 
-### A2. 当前主分析(rebuild 项目 `~/cardiac_glucose_rebuild_20260728/scripts/`)—— 最终版
+### A2. 当前主分析(private source project path redacted)—— 最终版
 
 | 原路径 | 功能 | 状态 | 建议新路径 |
 |---|---|---|---|
@@ -54,8 +54,8 @@
 
 ### A4. 历史/审计(非最终,superceded)
 
-- `~/cardiac_glucose_supplementary_analyses/R/01–09`(landmark/alt_gv/measurement/diabetes_ix/extremes/ipw/missing/absrisk/figures):**SUPERSEDED**(frame 缺陷由 framefix 版替代)→ archive
-- `~/cardiac_glucose_supplementary_analyses/corrected_scripts/*_bloodonly.R`(非 framefix 版):**SUPERSEDED** → archive
+- private supplementary source paths (R/01–09; source paths redacted; landmark/alt_gv/measurement/diabetes_ix/extremes/ipw/missing/absrisk/figures):**SUPERSEDED**(frame 缺陷由 framefix 版替代)→ archive
+- private supplementary source paths (corrected_scripts/*_bloodonly.R; source paths redacted):**SUPERSEDED** → archive
 - `corrected_scripts/*_framefix.R` 与 `06_rcs_spline_framefix.R`、`08_figures_framefix.R`、`08b_figures_fixedscale.R`、`09_rcs_curves_framefix.R`、`07_frame_registry.R`:frame 修复版(补充材料来源)→ USED-FINAL(补充链)→ analyses/04_time_dependent 与 analyses/03_primary_mimic 的 supplement 部分
 - `reviewer_issue_verification_20260728/scripts/fixed_scale_*.py`:fixed-scale 统一(表内 per-SD 尺度)→ USED-FINAL(补充链)
 - `github_release/`(早期公开草稿):**SUPERSEDED**(由本次新仓库替代)
@@ -103,7 +103,7 @@
 
 ## E. 硬编码与敏感内容(整理时必须清除)
 
-- 全部脚本含本地用户目录绝对路径(已统一净化为 `~/...` 记录) → 改读 config;
+- 全部脚本原先含本地用户目录路径 → 改读 config; public release 中不保留本机目录;
 - docker 容器名/端口/密码(inspire-pg、mimic-pg、eicu-pg)→ config,密码不入库;
 - 患者级 stay_id/subject_id 列(仅存在于禁止公开的数据文件,代码中不出现字面 ID);
 - 数据库连接字符串(仅 inspire 脚本内嵌 docker exec;改为 config 驱动)。

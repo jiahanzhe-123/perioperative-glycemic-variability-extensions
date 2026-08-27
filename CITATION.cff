@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "Perioperative glucose variability after open cardiac surgery: analysis code for a multi-database cohort study"
-version: "1.1.0"
-date-released: "2026-08-22"
+title: "Perioperative glucose variability after open cardiac surgery: analysis code and event-limited sensitivity extensions"
+version: "1.1.1"
+date-released: "2026-08-27"
 authors:
   - family-names: "Jia"
     given-names: "Hanzhe"
@@ -30,7 +30,7 @@ authors:
     email: "iningxiang@qq.com"
   - family-names: "Kuang"
     given-names: "Jiangying"
-    email: "710887707@qq.com"
+    email: "jiangyingkuang@email.sdu.edu.cn"
 keywords:
   - glucose variability
   - cardiac surgery

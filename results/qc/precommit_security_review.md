@@ -1,6 +1,6 @@
 # Pre-commit Security Review
 
-日期: 2026-08-01; 仓库: ~/perioperative-glycemic-variability (git init, branch main)
+日期: 2026-08-01; 仓库: public repository (git init, branch main)
 
 ## 暂存概况
 

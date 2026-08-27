@@ -1,98 +1,98 @@
-src,dst,action,content_modified,used_in_final,status
-~/Documents/Codex/2026-07-18/volumes-mimic-data/scripts/00_schema_inventory.sql,sql/mimic/00_schema_inventory.sql,migrate,paths_only,yes,OK
-~/Documents/Codex/2026-07-18/volumes-mimic-data/scripts/01_build_cardiac_surgery_codebook.sql,sql/mimic/01_build_cardiac_surgery_codebook.sql,migrate,paths_only,yes,OK
-~/Documents/Codex/2026-07-18/volumes-mimic-data/scripts/02_build_cohort.sql,sql/mimic/02_build_cohort.sql,migrate,paths_only,yes,OK
-~/Documents/Codex/2026-07-18/volumes-mimic-data/scripts/03_build_itemid_review.sql,sql/mimic/03_build_itemid_review.sql,migrate,paths_only,yes,OK
-~/Documents/Codex/2026-07-18/volumes-mimic-data/scripts/04_extract_vitals_24h.sql,sql/mimic/04_extract_vitals_24h.sql,migrate,paths_only,yes,OK
-~/Documents/Codex/2026-07-18/volumes-mimic-data/scripts/05_extract_labs.sql,sql/mimic/05_extract_labs.sql,migrate,paths_only,yes,OK
-~/Documents/Codex/2026-07-18/volumes-mimic-data/scripts/06_extract_comorbidities_bmi.sql,sql/mimic/06_extract_comorbidities_bmi.sql,migrate,paths_only,yes,OK
-~/Documents/Codex/2026-07-18/volumes-mimic-data/scripts/07_extract_treatments.sql,sql/mimic/07_extract_treatments.sql,migrate,paths_only,yes,OK
-~/Documents/Codex/2026-07-18/volumes-mimic-data/scripts/08_build_severity.sql,sql/mimic/08_build_severity.sql,migrate,paths_only,yes,OK
-~/Documents/Codex/2026-07-18/volumes-mimic-data/scripts/09_build_shr_gv.sql,sql/mimic/09_build_shr_gv.sql,migrate,paths_only,yes,OK
-~/Documents/Codex/2026-07-18/volumes-mimic-data/scripts/10_build_final_features.sql,sql/mimic/10_build_final_features.sql,migrate,paths_only,yes,OK
-~/Documents/Codex/2026-07-18/volumes-mimic-data/scripts/11_build_qc_report.sql,sql/mimic/11_build_qc_report.sql,migrate,paths_only,yes,OK
-~/cardiac_glucose_supplementary_analyses/github_release/sql/mimic/12_bloodonly_glucose_patch.sql,sql/mimic/12_bloodonly_glucose_patch.sql,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/01_glucose_series_rebuild.py,analyses/02_glucose_processing/01_rebuild_glucose_series.py,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/02_build_analysis_dataset.py,analyses/01_cohort_construction/02_build_analysis_dataset.py,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/03b_mice_rerun.R,analyses/03_primary_mimic/03_run_primary_models_mice.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/04_ph_rcs_absrisk.R,analyses/03_primary_mimic/04_ph_rcs_absoluterisk.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/06_shr_hba1c.R,analyses/08_shr_component/01_shr_hba1c_ipw.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/07a_source_series.py,analyses/05_source_sensitivity/01_build_source_series.py,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/07b_source_models.R,analyses/05_source_sensitivity/02_fit_source_models.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/08_harmonized.R,analyses/07_eicu/01_fit_harmonized_models.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/09_sensitivity.R,analyses/03_primary_mimic/05_sensitivity_models.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/10_performance.R,analyses/03_primary_mimic/06_model_performance.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/11_assembly.py,analyses/09_quality_control/01_assemble_results.py,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/12_missing_data_report.R,analyses/09_quality_control/02_missing_data_report.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/20_joint_prep.py,analyses/08_shr_component/02_joint_prep.py,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/21_joint_models.R,analyses/08_shr_component/03_joint_models.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/22_joint_risk_perf.R,analyses/08_shr_component/04_joint_risk_performance.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/23_joint_source.R,analyses/08_shr_component/05_joint_source_sensitivity.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/24_joint_qc_assembly.py,analyses/08_shr_component/06_joint_qc_assembly.py,migrate,paths_only,yes,OK
-~/cardiac_glucose_supplementary_analyses/corrected_scripts/01_refit_primary_models.R,analyses/03_primary_mimic/supplement/01_refit_primary_models.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_supplementary_analyses/corrected_scripts/03_alt_gv_bloodonly_framefix.R,analyses/03_primary_mimic/supplement/03_alt_gv_framefix.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_supplementary_analyses/corrected_scripts/03_measurement_bloodonly_framefix.R,analyses/03_primary_mimic/supplement/03_measurement_framefix.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_supplementary_analyses/corrected_scripts/04_diabetes_ix_bloodonly_framefix.R,analyses/03_primary_mimic/supplement/04_diabetes_ix_framefix.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_supplementary_analyses/corrected_scripts/05_extremes_bloodonly_framefix.R,analyses/03_primary_mimic/supplement/05_extremes_framefix.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_supplementary_analyses/corrected_scripts/06_rcs_spline_framefix.R,analyses/04_time_dependent/01_rcs_spline_framefix.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_supplementary_analyses/corrected_scripts/07_frame_registry.R,analyses/09_quality_control/03_frame_registry.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_supplementary_analyses/corrected_scripts/08_figures_framefix.R,analyses/04_time_dependent/02_figures_framefix.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_supplementary_analyses/corrected_scripts/08b_figures_fixedscale.R,analyses/04_time_dependent/03_figures_fixedscale.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_supplementary_analyses/corrected_scripts/09_rcs_curves_framefix.R,analyses/04_time_dependent/04_rcs_curves.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_supplementary_analyses/reviewer_issue_verification_20260728/scripts/fixed_scale_constants.py,analyses/03_primary_mimic/supplement/06_fixed_scale_constants.py,migrate,paths_only,yes,OK
-~/cardiac_glucose_supplementary_analyses/reviewer_issue_verification_20260728/scripts/fixed_scale_rescale.py,analyses/03_primary_mimic/supplement/07_fixed_scale_rescale.py,migrate,paths_only,yes,OK
-~/cardiac_glucose_supplementary_analyses/reviewer_issue_verification_20260728/scripts/fixed_scale_display.py,analyses/03_primary_mimic/supplement/08_fixed_scale_display.py,migrate,paths_only,yes,OK
-~/cardiac_glucose_supplementary_analyses/reviewer_issue_verification_20260728/scripts/build_bloodonly_features.py,analyses/02_glucose_processing/02_build_bloodonly_features.py,migrate,paths_only,yes,OK
-~/inspire_cardiac_20260729/scripts/01_import_tables.sh,analyses/06_inspire/01_import_tables.sh,migrate,paths_only,yes,OK
-~/inspire_cardiac_20260729/sql/00_create_database.sql,sql/inspire/00_create_database.sql,migrate,paths_only,yes,OK
-~/inspire_cardiac_20260729/sql/02_indexes.sql,sql/inspire/02_indexes.sql,migrate,paths_only,yes,OK
-~/inspire_cardiac_20260729/sql/03_schema_audit.sql,sql/inspire/03_schema_audit.sql,migrate,paths_only,yes,OK
-~/inspire_cardiac_20260729/sql/04_procedure_audit.sql,sql/inspire/04_procedure_audit.sql,migrate,paths_only,yes,OK
-~/inspire_cardiac_20260729/sql/05_lab_audit.sql,sql/inspire/05_lab_audit.sql,migrate,paths_only,yes,OK
-~/inspire_cardiac_20260729/sql/06_cohort_build.sql,sql/inspire/06_cohort_build.sql,migrate,paths_only,yes,OK
-~/inspire_cardiac_20260729/sql/07_glucose_features.sql,sql/inspire/07_glucose_features.sql,migrate,paths_only,yes,OK
-~/inspire_cardiac_20260729/sql/08_analysis_base.sql,sql/inspire/08_analysis_base.sql,migrate,paths_only,yes,OK
-~/inspire_cardiac_20260729/sql/09_comorbidity_outcome_audit.sql,sql/inspire/09_comorbidity_outcome_audit.sql,migrate,paths_only,yes,OK
-~/inspire_cardiac_20260729/sql/10_anchor_windows.sql,sql/inspire/10_anchor_windows.sql,migrate,paths_only,yes,OK
-~/inspire_cardiac_20260729/sql/qc_tests.sql,sql/inspire/11_qc_tests.sql,migrate,paths_only,yes,OK
-~/inspire_cardiac_20260729/scripts/15_outcome_time_repairs_models.R,analyses/06_inspire/02_outcome_time_repairs.R,migrate,paths_only,yes,OK
-~/inspire_cardiac_20260729/scripts/16_repairs_remaining_reruns.R,analyses/06_inspire/03_sensitivity_joint_repairs.R,migrate,paths_only,yes,OK
-~/inspire_cardiac_20260729/scripts/17_ccmask_fix_rerun.R,analyses/06_inspire/04_final_models_v3.R,migrate,paths_only,yes,OK
-~/inspire_cardiac_20260729/scripts/14_inspire_qc_assembly.py,analyses/06_inspire/05_qc_assembly.py,migrate,paths_only,yes,OK
-~/eicu_cardiac_glucose_validation/sql/01_schema_audit.sql,sql/eicu/01_schema_audit.sql,migrate,paths_only,yes,OK
-~/eicu_cardiac_glucose_validation/sql/01b_categorical_audit.sql,sql/eicu/01b_categorical_audit.sql,migrate,paths_only,yes,OK
-~/eicu_cardiac_glucose_validation/sql/02_candidate_terms_extract.sql,sql/eicu/02_candidate_terms_extract.sql,migrate,paths_only,yes,OK
-~/eicu_cardiac_glucose_validation/sql/02b_classify_terms.sql,sql/eicu/02b_classify_terms.sql,migrate,paths_only,yes,OK
-~/eicu_cardiac_glucose_validation/sql/02c_classify_terms_v2.sql,sql/eicu/02c_classify_terms_v2.sql,migrate,paths_only,yes,OK
-~/eicu_cardiac_glucose_validation/sql/02d_export_terms.sql,sql/eicu/02d_export_terms.sql,migrate,paths_only,yes,OK
-~/eicu_cardiac_glucose_validation/sql/03_surgery_evidence.sql,sql/eicu/03_surgery_evidence.sql,migrate,paths_only,yes,OK
-~/eicu_cardiac_glucose_validation/sql/04_cohort_base.sql,sql/eicu/04_cohort_base.sql,migrate,paths_only,yes,OK
-~/eicu_cardiac_glucose_validation/sql/06a_glucose.sql,sql/eicu/06a_glucose.sql,migrate,paths_only,yes,OK
-~/eicu_cardiac_glucose_validation/sql/06b_covariates.sql,sql/eicu/06b_covariates.sql,migrate,paths_only,yes,OK
-~/eicu_cardiac_glucose_validation/sql/06c_outcomes_hba1c.sql,sql/eicu/06c_outcomes_hba1c.sql,migrate,paths_only,yes,OK
-~/eicu_cardiac_glucose_validation/sql/07_qc.sql,sql/eicu/07_qc.sql,migrate,paths_only,yes,OK
-~/eicu_cardiac_glucose_validation/sql/08_final_table.sql,sql/eicu/08_final_table.sql,migrate,paths_only,yes,OK
-~/cardiac_glucose_multidatabase_replication_v1/sql/03_eicu_harmonized.sql,sql/eicu/09_harmonized.sql,migrate,paths_only,yes,OK
-~/cardiac_glucose_multidatabase_replication_v1/python/02_mimic_features.py,analyses/07_eicu/02_harmonized_mimic_features.py,migrate,paths_only,yes,OK
-~/cardiac_glucose_multidatabase_replication_v1/python/03_mimic_model_data.py,analyses/07_eicu/03_harmonized_mimic_model_data.py,migrate,paths_only,yes,OK
-~/cardiac_glucose_multidatabase_replication_v1/R/05_models.R,analyses/07_eicu/04_models.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_multidatabase_replication_v1/R/06_tables_figures.R,analyses/07_eicu/05_tables_figures.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_multidatabase_replication_v1/R/04_qc.R,analyses/07_eicu/06_qc.R,migrate,paths_only,yes,OK
-~/cardiac_glucose_rebuild_20260728/scripts/03_primary_models.R,archive/not_used_in_final_analysis/mimic_03_primary_models_superseded_by_03b.R,archive,paths_only,archive,OK
-~/inspire_cardiac_20260729/scripts/11_inspire_analysis.R,archive/not_used_in_final_analysis/inspire_11_superseded_by_15_16_17.R,archive,paths_only,archive,OK
-~/inspire_cardiac_20260729/scripts/12_inspire_sensitivity.R,archive/not_used_in_final_analysis/inspire_12_superseded_by_16.R,archive,paths_only,archive,OK
-~/inspire_cardiac_20260729/scripts/13_inspire_joint_perf.R,archive/not_used_in_final_analysis/inspire_13_superseded_by_16.R,archive,paths_only,archive,OK
-~/Documents/Codex/2026-07-29/a/outputs/final_integration/final_repaired/phase3_5_bmi_repair/_work/_task_d.py,analyses/01_cohort_construction/03_apply_bmi_plausibility.py,migrate,config_driven_rewrite_same_logic,yes,"OK; rerun 2026-08-01: output sha256=2163168d… byte-identical to frozen AoR frame; 35 rows set missing"
-~/Documents/Codex/2026-07-29/a/outputs/final_integration/final_repaired/phase3_5_bmi_repair/_work/rerun_scripts/03b_mice_rerun.R,analyses/03_primary_mimic/03_run_primary_models_mice.R,verify_existing,none(already migrated from rebuild; AoR script identical except ROOT),yes,"VERIFIED: diff vs rebuild original = ROOT line only; repo rerun 2026-08-01 outputs byte-identical to AoR (0.9794/0.9850)"
-~/Desktop/GV_Cardiac_Glucose_Reproducibility_v5_20260730/code/current_v5/18_uniform_admin_censoring_rerun_v5.R,analyses/06_inspire/05_uniform_admin_censoring_v5.R,migrate,paths_only,yes,"OK; rerun 2026-08-01: 30d/48h/absrisk/sensitivity/QC outputs byte-identical to v5 package (0.9046/1.1044)"
-~/Documents/Codex/2026-07-29/a/outputs/final_integration/final_repaired/phase3_5_bmi_repair/_work/rerun_scripts/ (其余 26 个 R 脚本),analyses/03_primary_mimic/ + 08_shr_component/ + 09_quality_control/ 同名既有迁移脚本,verify_reference,repo equivalents migrated from rebuild lineage; AoR run used same code on repaired frame,yes,"VERIFIED_REFERENCE: AoR 下游结果位于 bmi_repair_work rerun_root/results;分块变体(04a-c/10_*/22_*)为运行期拆分,不重复迁移"
-~/Documents/Codex/2026-07-29/a/outputs/final_integration/final_repaired/stats_fix_phase1/results/PH365_INTERVAL_MICE_POOLED.csv,analyses/04_time_dependent/05_mice_pooled_interval_models.R,migrate,paths_only,yes,"OK; generating script migrated and rerun 2026-08-01; interval, log-time, and corrected 30-day estimates match frozen values"
-~/Documents/Codex/2026-07-29/a/outputs/final_integration/final_repaired/stats_fix_phase1/scripts/01_mimic_ph_repairs_mice_pooled.R,analyses/04_time_dependent/05_mice_pooled_interval_models.R,migrate,paths_only,yes,"OK; rerun 2026-08-01: 区间 1.0629/0.9739/0.9379 与 logtime 0.9662 全等冻结值;sanity 复现 0.979381/0.984981"
-~/Documents/Codex/2026-07-29/a/outputs/final_integration/final_repaired/stats_fix_phase1/scripts/03_mimic_365d_covariate_tt_sensitivity.R,analyses/04_time_dependent/09_covariate_tt_sensitivity.R,migrate,paths_only,yes,"OK; rerun 2026-08-01 后台任务内"
-~/Documents/Codex/2026-07-29/a/outputs/final_integration/final_repaired/stats_fix_phase1/scripts/02_eicu_random_intercept_rerun.R,analyses/07_eicu/07_random_intercept_rerun.R,migrate,paths_only,yes,"OK; rerun: OR 1.167435 (1.035586-1.316069) P=0.01134461,与 phase1 字节一致"
-~/Documents/Codex/2026-07-29/a/outputs/final_integration/final_repaired/figure_build/build_figures.py,analyses/09_quality_control/figure_build/build_main_figures.py,migrate,paths_only,yes,"OK; 重生成 Main F1-F5 + INSPIRE S 图(内容一致,渲染随环境)"
-~/Documents/Codex/2026-07-29/a/outputs/final_integration/final_repaired/figure_build/make_fig23_main.py,analyses/09_quality_control/figure_build/build_fig23_main_figures.py,migrate,paths_only+strip daimon_runtime,yes,"OK; 重生成 F2/F3(投稿包 F2/F3 即此脚本产物,md5 已证)"
-~/Documents/Codex/2026-07-29/a/outputs/final_integration/final_repaired/figure_build/make_ph_audit_fig.py,analyses/09_quality_control/figure_build/build_ph_audit_figure.py,migrate,paths_only+strip daimon_runtime,yes,"OK; 重生成 figS5_ph_audit.png"
-~/Documents/Codex/2026-07-29/a/outputs/final_integration/final_repaired/phase4_document_repair/_work/draw_supp_figures.py,analyses/09_quality_control/figure_build/build_supplement_figures.py,migrate,paths_only+strip daimon_runtime,yes,"OK; 重生成 S6/S7(旧)/S11(旧)/S12(旧) 图版"
-(new) 02_missing_data_report.R 输出图的纵向合成,analyses/09_quality_control/figure_build/merge_s1_mice_figure.py,new,—,yes,"OK; 由 mice_trace/mice_density 合成 figS1_mice_merged_vertical.png"
-~/Documents/Codex/2026-07-29/a/outputs/final_integration/final_repaired/stats_fix_phase1/scripts/01b_tt365_par.R + 01c/01d/01e 分块管线,archive(未迁移),not_migrated,—,no,"01b 为弃用并行尝试;01c-01e 为同一输出的可恢复分块路径,01 主脚本已覆盖其产物,不重复迁移"
+source_path_id,repository_path,action,provenance,include,notes
+private-source-001,sql/mimic/00_schema_inventory.sql,migrate,paths_only,yes,OK
+private-source-002,sql/mimic/01_build_cardiac_surgery_codebook.sql,migrate,paths_only,yes,OK
+private-source-003,sql/mimic/02_build_cohort.sql,migrate,paths_only,yes,OK
+private-source-004,sql/mimic/03_build_itemid_review.sql,migrate,paths_only,yes,OK
+private-source-005,sql/mimic/04_extract_vitals_24h.sql,migrate,paths_only,yes,OK
+private-source-006,sql/mimic/05_extract_labs.sql,migrate,paths_only,yes,OK
+private-source-007,sql/mimic/06_extract_comorbidities_bmi.sql,migrate,paths_only,yes,OK
+private-source-008,sql/mimic/07_extract_treatments.sql,migrate,paths_only,yes,OK
+private-source-009,sql/mimic/08_build_severity.sql,migrate,paths_only,yes,OK
+private-source-010,sql/mimic/09_build_shr_gv.sql,migrate,paths_only,yes,OK
+private-source-011,sql/mimic/10_build_final_features.sql,migrate,paths_only,yes,OK
+private-source-012,sql/mimic/11_build_qc_report.sql,migrate,paths_only,yes,OK
+private-source-013,sql/mimic/12_bloodonly_glucose_patch.sql,migrate,paths_only,yes,OK
+private-source-014,analyses/02_glucose_processing/01_rebuild_glucose_series.py,migrate,paths_only,yes,OK
+private-source-015,analyses/01_cohort_construction/02_build_analysis_dataset.py,migrate,paths_only,yes,OK
+private-source-016,analyses/03_primary_mimic/03_run_primary_models_mice.R,migrate,paths_only,yes,OK
+private-source-017,analyses/03_primary_mimic/04_ph_rcs_absoluterisk.R,migrate,paths_only,yes,OK
+private-source-018,analyses/08_shr_component/01_shr_hba1c_ipw.R,migrate,paths_only,yes,OK
+private-source-019,analyses/05_source_sensitivity/01_build_source_series.py,migrate,paths_only,yes,OK
+private-source-020,analyses/05_source_sensitivity/02_fit_source_models.R,migrate,paths_only,yes,OK
+private-source-021,analyses/07_eicu/01_fit_harmonized_models.R,migrate,paths_only,yes,OK
+private-source-022,analyses/03_primary_mimic/05_sensitivity_models.R,migrate,paths_only,yes,OK
+private-source-023,analyses/03_primary_mimic/06_model_performance.R,migrate,paths_only,yes,OK
+private-source-024,analyses/09_quality_control/01_assemble_results.py,migrate,paths_only,yes,OK
+private-source-025,analyses/09_quality_control/02_missing_data_report.R,migrate,paths_only,yes,OK
+private-source-026,analyses/08_shr_component/02_joint_prep.py,migrate,paths_only,yes,OK
+private-source-027,analyses/08_shr_component/03_joint_models.R,migrate,paths_only,yes,OK
+private-source-028,analyses/08_shr_component/04_joint_risk_performance.R,migrate,paths_only,yes,OK
+private-source-029,analyses/08_shr_component/05_joint_source_sensitivity.R,migrate,paths_only,yes,OK
+private-source-030,analyses/08_shr_component/06_joint_qc_assembly.py,migrate,paths_only,yes,OK
+private-source-031,analyses/03_primary_mimic/supplement/01_refit_primary_models.R,migrate,paths_only,yes,OK
+private-source-032,analyses/03_primary_mimic/supplement/03_alt_gv_framefix.R,migrate,paths_only,yes,OK
+private-source-033,analyses/03_primary_mimic/supplement/03_measurement_framefix.R,migrate,paths_only,yes,OK
+private-source-034,analyses/03_primary_mimic/supplement/04_diabetes_ix_framefix.R,migrate,paths_only,yes,OK
+private-source-035,analyses/03_primary_mimic/supplement/05_extremes_framefix.R,migrate,paths_only,yes,OK
+private-source-036,analyses/04_time_dependent/01_rcs_spline_framefix.R,migrate,paths_only,yes,OK
+private-source-037,analyses/09_quality_control/03_frame_registry.R,migrate,paths_only,yes,OK
+private-source-038,analyses/04_time_dependent/02_figures_framefix.R,migrate,paths_only,yes,OK
+private-source-039,analyses/04_time_dependent/03_figures_fixedscale.R,migrate,paths_only,yes,OK
+private-source-040,analyses/04_time_dependent/04_rcs_curves.R,migrate,paths_only,yes,OK
+private-source-041,analyses/03_primary_mimic/supplement/06_fixed_scale_constants.py,migrate,paths_only,yes,OK
+private-source-042,analyses/03_primary_mimic/supplement/07_fixed_scale_rescale.py,migrate,paths_only,yes,OK
+private-source-043,analyses/03_primary_mimic/supplement/08_fixed_scale_display.py,migrate,paths_only,yes,OK
+private-source-044,analyses/02_glucose_processing/02_build_bloodonly_features.py,migrate,paths_only,yes,OK
+private-source-045,analyses/06_inspire/01_import_tables.sh,migrate,paths_only,yes,OK
+private-source-046,sql/inspire/00_create_database.sql,migrate,paths_only,yes,OK
+private-source-047,sql/inspire/02_indexes.sql,migrate,paths_only,yes,OK
+private-source-048,sql/inspire/03_schema_audit.sql,migrate,paths_only,yes,OK
+private-source-049,sql/inspire/04_procedure_audit.sql,migrate,paths_only,yes,OK
+private-source-050,sql/inspire/05_lab_audit.sql,migrate,paths_only,yes,OK
+private-source-051,sql/inspire/06_cohort_build.sql,migrate,paths_only,yes,OK
+private-source-052,sql/inspire/07_glucose_features.sql,migrate,paths_only,yes,OK
+private-source-053,sql/inspire/08_analysis_base.sql,migrate,paths_only,yes,OK
+private-source-054,sql/inspire/09_comorbidity_outcome_audit.sql,migrate,paths_only,yes,OK
+private-source-055,sql/inspire/10_anchor_windows.sql,migrate,paths_only,yes,OK
+private-source-056,sql/inspire/11_qc_tests.sql,migrate,paths_only,yes,OK
+private-source-057,analyses/06_inspire/02_outcome_time_repairs.R,migrate,paths_only,yes,OK
+private-source-058,analyses/06_inspire/03_sensitivity_joint_repairs.R,migrate,paths_only,yes,OK
+private-source-059,analyses/06_inspire/04_final_models_v3.R,migrate,paths_only,yes,OK
+private-source-060,analyses/06_inspire/05_qc_assembly.py,migrate,paths_only,yes,OK
+private-source-061,sql/eicu/01_schema_audit.sql,migrate,paths_only,yes,OK
+private-source-062,sql/eicu/01b_categorical_audit.sql,migrate,paths_only,yes,OK
+private-source-063,sql/eicu/02_candidate_terms_extract.sql,migrate,paths_only,yes,OK
+private-source-064,sql/eicu/02b_classify_terms.sql,migrate,paths_only,yes,OK
+private-source-065,sql/eicu/02c_classify_terms_v2.sql,migrate,paths_only,yes,OK
+private-source-066,sql/eicu/02d_export_terms.sql,migrate,paths_only,yes,OK
+private-source-067,sql/eicu/03_surgery_evidence.sql,migrate,paths_only,yes,OK
+private-source-068,sql/eicu/04_cohort_base.sql,migrate,paths_only,yes,OK
+private-source-069,sql/eicu/06a_glucose.sql,migrate,paths_only,yes,OK
+private-source-070,sql/eicu/06b_covariates.sql,migrate,paths_only,yes,OK
+private-source-071,sql/eicu/06c_outcomes_hba1c.sql,migrate,paths_only,yes,OK
+private-source-072,sql/eicu/07_qc.sql,migrate,paths_only,yes,OK
+private-source-073,sql/eicu/08_final_table.sql,migrate,paths_only,yes,OK
+private-source-074,sql/eicu/09_harmonized.sql,migrate,paths_only,yes,OK
+private-source-075,analyses/07_eicu/02_harmonized_mimic_features.py,migrate,paths_only,yes,OK
+private-source-076,analyses/07_eicu/03_harmonized_mimic_model_data.py,migrate,paths_only,yes,OK
+private-source-077,analyses/07_eicu/04_models.R,migrate,paths_only,yes,OK
+private-source-078,analyses/07_eicu/05_tables_figures.R,migrate,paths_only,yes,OK
+private-source-079,analyses/07_eicu/06_qc.R,migrate,paths_only,yes,OK
+private-source-080,archive/not_used_in_final_analysis/mimic_03_primary_models_superseded_by_03b.R,archive,paths_only,archive,OK
+private-source-081,archive/not_used_in_final_analysis/inspire_11_superseded_by_15_16_17.R,archive,paths_only,archive,OK
+private-source-082,archive/not_used_in_final_analysis/inspire_12_superseded_by_16.R,archive,paths_only,archive,OK
+private-source-083,archive/not_used_in_final_analysis/inspire_13_superseded_by_16.R,archive,paths_only,archive,OK
+private-source-084,analyses/01_cohort_construction/03_apply_bmi_plausibility.py,migrate,config_driven_rewrite_same_logic,yes,"OK; rerun 2026-08-01: output sha256=2163168d… byte-identical to frozen AoR frame; 35 rows set missing"
+private-source-085,analyses/03_primary_mimic/03_run_primary_models_mice.R,verify_existing,none(already migrated from rebuild; AoR script identical except ROOT),yes,"VERIFIED: diff vs rebuild original = ROOT line only; repo rerun 2026-08-01 outputs byte-identical to AoR (0.9794/0.9850)"
+private-source-086,analyses/06_inspire/05_uniform_admin_censoring_v5.R,migrate,paths_only,yes,"OK; rerun 2026-08-01: 30d/48h/absrisk/sensitivity/QC outputs byte-identical to v5 package (0.9046/1.1044)"
+private-source-087,analyses/03_primary_mimic/ + 08_shr_component/ + 09_quality_control/ 同名既有迁移脚本,verify_reference,repo equivalents migrated from rebuild lineage; AoR run used same code on repaired frame,yes,"VERIFIED_REFERENCE: AoR 下游结果位于 bmi_repair_work rerun_root/results;分块变体(04a-c/10_*/22_*)为运行期拆分,不重复迁移"
+private-source-088,analyses/04_time_dependent/05_mice_pooled_interval_models.R,migrate,paths_only,yes,"OK; generating script migrated and rerun 2026-08-01; interval, log-time, and corrected 30-day estimates match frozen values"
+private-source-089,analyses/04_time_dependent/05_mice_pooled_interval_models.R,migrate,paths_only,yes,"OK; rerun 2026-08-01: 区间 1.0629/0.9739/0.9379 与 logtime 0.9662 全等冻结值;sanity 复现 0.979381/0.984981"
+private-source-090,analyses/04_time_dependent/09_covariate_tt_sensitivity.R,migrate,paths_only,yes,"OK; rerun 2026-08-01 后台任务内"
+private-source-091,analyses/07_eicu/07_random_intercept_rerun.R,migrate,paths_only,yes,"OK; rerun: OR 1.167435 (1.035586-1.316069) P=0.01134461,与 phase1 字节一致"
+private-source-092,analyses/09_quality_control/figure_build/build_main_figures.py,migrate,paths_only,yes,"OK; 重生成 Main F1-F5 + INSPIRE S 图(内容一致,渲染随环境)"
+private-source-093,analyses/09_quality_control/figure_build/build_fig23_main_figures.py,migrate,paths_only+strip daimon_runtime,yes,"OK; 重生成 F2/F3(投稿包 F2/F3 即此脚本产物,md5 已证)"
+private-source-094,analyses/09_quality_control/figure_build/build_ph_audit_figure.py,migrate,paths_only+strip daimon_runtime,yes,"OK; 重生成 figS5_ph_audit.png"
+private-source-095,analyses/09_quality_control/figure_build/build_supplement_figures.py,migrate,paths_only+strip daimon_runtime,yes,"OK; 重生成 S6/S7(旧)/S11(旧)/S12(旧) 图版"
+private-source-096,analyses/09_quality_control/figure_build/merge_s1_mice_figure.py,new,—,yes,"OK; 由 mice_trace/mice_density 合成 figS1_mice_merged_vertical.png"
+private-source-097,archive(未迁移),not_migrated,—,no,"01b 为弃用并行尝试;01c-01e 为同一输出的可恢复分块路径,01 主脚本已覆盖其产物,不重复迁移"

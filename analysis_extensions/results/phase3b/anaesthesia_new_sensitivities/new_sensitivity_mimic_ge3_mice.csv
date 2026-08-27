@@ -1,0 +1,2 @@
+"analysis_id","cohort_definition","N","events","HR_per10","lower95","upper95","p_value","beta","se","df","m","maxit","imputation_method","seed","fit_status"
+"ANAESTHESIA_SENS3_MIMIC_GE3_MODEL_B_30D","Final priority-series landmark cohort with >=3 retained glucose measurements",10398,272,0.973942028508388,0.913936897022643,1.03788683659145,0.415757843615902,-0.0264034960961554,0.032444569812432,1167134.73339975,50,20,"pmm",20260827,"PASS"

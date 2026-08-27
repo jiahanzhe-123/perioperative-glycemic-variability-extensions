@@ -1,8 +1,8 @@
 # Release Checklist
 
-Status: **GITHUB RELEASE PUBLISHED v1.1.0 (2026-08-22)**. The original v1.0.1
-snapshot remains archived; the Phase 3B extension bundle is public on GitHub.
-The v1.1.0 archival DOI remains unverified and is not claimed here.
+Status: **GITHUB RELEASE PUBLISHED v1.1.1 (2026-08-27)**. The original
+v1.0.1 snapshot and v1.1.0 Phase 3B extension bundle remain preserved; v1.1.1
+adds the locked event-limited sensitivity bundle.
 
 ## 1. Code audit
 - [x] All scripts inventoried (`docs/CODE_INVENTORY.md`)
@@ -62,15 +62,19 @@ The v1.1.0 archival DOI remains unverified and is not claimed here.
 - [x] Public aggregate Figure 3 builder added and limited to 18 aggregate rows
 - [x] Final Figure 1/Figure 3 aggregate-safe files and panel-level source map added
 - [x] Release manifest and file-hash manifest prepared in the controlled workspace
-- [x] GitHub `v1.1.0` tag and release published and verified
-- [ ] Zenodo versioned archive DOI verified for `v1.1.0`
+- [x] v1.1.1 event-limited sensitivity lock, runner, aggregate results, bootstrap
+      summary, MIMIC at-least-three-measurement output, and QC record added
 
 ## 9. Release mechanics
 - [x] Create private GitHub repo first
 - [ ] **[AUTHOR]** Invite a co-author to review
 - [x] Tags `v1.0.0` and `v1.0.1` created after the technical and privacy checks
       were complete
+- [x] GitHub tag and public release `v1.1.1` created after the sensitivity
+      bundle and privacy checks were complete
 - [x] Archive on Zenodo and update `CITATION.cff`, README, and the manuscript
       code-availability statement with concept DOI `10.5281/zenodo.21791846`
       (version DOI `10.5281/zenodo.21791847`)
 - [x] Flip repository to public
+- [ ] No versioned Zenodo DOI is claimed for v1.1.1 without a verified archive
+      record

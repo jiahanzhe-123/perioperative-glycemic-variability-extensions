@@ -5,9 +5,9 @@
 #       04_primary_results.csv, 06_absolute_risk.csv, 07_ph_diagnostics.csv, mice 诊断, rcs 非线性。
 rm(list=ls()); options(stringsAsFactors=FALSE, scipen=999)
 SEED <- 20260726L; set.seed(SEED)
-.libPaths(c("~/cardiac_glucose_rebuild_20260728/rlib", .libPaths()))
+.libPaths(c(file.path("private", "r-library"), .libPaths()))
 suppressMessages({library(survival); library(mice); library(jsonlite); library(rms)})
-ROOT <- normalizePath("~/inspire_cardiac_20260729")
+ROOT <- normalizePath(file.path("private", "inspire_project"), mustWork=FALSE)
 dir.create(file.path(ROOT,"results"), showWarnings=FALSE, recursive=TRUE)
 sink(file.path(ROOT,"logs","11_inspire_analysis.log"), split=TRUE)
 

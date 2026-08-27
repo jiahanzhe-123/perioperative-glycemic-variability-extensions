@@ -1,11 +1,12 @@
-# Perioperative glycemic variability: JAHA v5 extension release v1.1.0
+# Perioperative glycemic variability: JAHA v5 extension release v1.1.1
 
 > This repository combines the tracked code snapshot from the original public release with the final-lineage JAHA v5 measurement-context extension package.
 
-> **Repository release v1.1.0 (2026-08-22).** This release adds the Phase 3B
-> manuscript-production evidence package: aggregate source-dependence closure,
-> the 18-row SD-GV analytic-context landscape, public aggregate figure code,
-> figure-source provenance, and an explicit controlled-data boundary.
+> **Repository release v1.1.1 (2026-08-27).** This update
+> preserves the v1.1.0 Phase 3B evidence package and adds the locked,
+> post hoc event-limited sensitivity bundle: parsimonious Cox, ridge-penalised
+> Cox, and the MIMIC priority-series analysis requiring at least three retained
+> glucose measurements.
 
 The original public code remains available at [jiahanzhe-123/perioperative-glycemic-variability](https://github.com/jiahanzhe-123/perioperative-glycemic-variability). The added package is under [`analysis_extensions/`](analysis_extensions/).
 
@@ -19,6 +20,18 @@ The original public code remains available at [jiahanzhe-123/perioperative-glyce
 No patient/stay-level records, restricted raw or controlled inputs, real-data bootstrap replicates, manuscript files, local configuration, logs, or absolute-path manifests are included. The private reviewer data package remains local.
 
 For the extension-specific reproduction boundary and result map, see [`analysis_extensions/README.md`](analysis_extensions/README.md) and [`analysis_extensions/provenance/release_scope.csv`](analysis_extensions/provenance/release_scope.csv).
+
+## v1.1.1 sensitivity bundle
+
+The revision-specific sensitivity bundle is under
+[`analysis_extensions/results/phase3b/anaesthesia_new_sensitivities/`](analysis_extensions/results/phase3b/anaesthesia_new_sensitivities/).
+The pre-run lock is recorded in
+[`analysis_extensions/provenance/phase3b/ANAESTHESIA_NEW_SENSITIVITY_LOCK.md`](analysis_extensions/provenance/phase3b/ANAESTHESIA_NEW_SENSITIVITY_LOCK.md),
+and the reproducible runner is
+[`analysis_extensions/scripts/phase3b/run_anaesthesia_new_sensitivities.R`](analysis_extensions/scripts/phase3b/run_anaesthesia_new_sensitivities.R).
+The runner requires authorized local inputs configured from
+`analysis_extensions/config.example.yaml`; no patient-level data, controlled
+inputs, or local absolute paths are included.
 
 # Perioperative glucose variability after open cardiac surgery
 

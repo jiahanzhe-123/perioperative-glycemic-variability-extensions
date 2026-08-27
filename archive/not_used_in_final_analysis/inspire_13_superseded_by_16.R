@@ -2,9 +2,9 @@
 # 13_inspire_joint_perf.R — INSPIRE SHR–GV 联合模块(预设次要)+ 性能 + QC
 rm(list=ls()); options(stringsAsFactors=FALSE, scipen=999)
 SEED <- 20260726L; set.seed(SEED)
-.libPaths(c("~/cardiac_glucose_rebuild_20260728/rlib", .libPaths()))
+.libPaths(c(file.path("private", "r-library"), .libPaths()))
 suppressMessages({library(survival); library(mice); library(jsonlite); library(rms)})
-ROOT <- normalizePath("~/inspire_cardiac_20260729")
+ROOT <- normalizePath(file.path("private", "inspire_project"), mustWork=FALSE)
 sink(file.path(ROOT,"logs","13_inspire_joint_perf.log"), split=TRUE)
 
 b <- read.csv(file.path(ROOT,"data","inspire_base.csv"), stringsAsFactors=FALSE)
